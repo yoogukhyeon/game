@@ -3,13 +3,295 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>project</title>
+		<title>home</title>
 
 		<!-- css 초기화 -->
 		<link rel="stylesheet" href="./css/common/reset.css" />
 
 		<!-- css 공통 사용 -->
 		<link rel="stylesheet" href="./css/common/common.css" />
+
+		<style>
+			/* 컨테이너를 Flexbox로 설정 */
+			#container {
+				display: flex;
+				width: 100%;
+				height: 100vh; /* 전체 화면 높이 */
+			}
+
+			/* 사이드바 스타일링 */
+			.sidebar {
+				width: 8%;
+				background-color: #222;
+				color: white;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				justify-content: center; /* 중앙 정렬 */
+				align-items: center; /* 중앙 정렬 */
+				position: relative; /* 프린트 버튼을 맨 아래에 배치하기 위한 상대 위치 설정 */
+			}
+
+			.sidebar_list {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				flex-grow: 1; /* 사이드바 리스트가 중간에 배치되도록 공간 확보 */
+				display: flex;
+				flex-direction: column;
+				justify-content: center; /* 세로 중앙 정렬 */
+				align-items: center;
+				font-size: 14px;
+			}
+
+			.sidebar_list li {
+				margin-bottom: 35px;
+				cursor: pointer;
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+			}
+
+			.sidebar_list li img {
+				width: 25px; /* 아이콘 크기 설정 */
+				height: 25px;
+				margin-bottom: 10px; /* 아이콘과 텍스트 사이 간격 조정 */
+				filter: brightness(0) invert(1); /* 아이콘을 흰색으로 변환 */
+			}
+
+			/* 판매내역 항목에 오른쪽 아이콘 추가 */
+			.sidebar_list li:first-child::after {
+				content: '';
+				position: absolute;
+				right: -3px; /* 아이콘을 오른쪽 끝에 배치 */
+				width: 18px;
+				height: 18px;
+				background-image: url('./images/left_arrow.png'); /* 화살표 아이콘 이미지 경로 */
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				filter: brightness(0) invert(1); /* 화살표를 흰색으로 변환 */
+				display: block;
+			}
+
+			/* 프린트 버튼을 맨 아래에 배치 */
+			.sidebar span {
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				cursor: pointer;
+			}
+
+			/* content1 스타일링 */
+			.content1 {
+				width: 25%;
+				background-color: #eee;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+
+			/* 로고 이미지 영역 */
+			.content1_first {
+				margin-bottom: 20px;
+				text-align: left;
+			}
+
+			/* .title 스타일 수정 */
+			.content1_first .title {
+				font-size: 33px;
+				font-weight: bold;
+				color: #000000;
+				text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 텍스트에 그림자 추가 */
+			}
+
+			.content1_first img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			/* 닉네임, 금액, 로그아웃 버튼 영역 */
+			.content1_sec {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 15px 0;
+
+				border-radius: 5px;
+				font-size: 16px;
+			}
+
+			.content1_sec .nickname {
+				font-weight: bold;
+			}
+
+			.content1_sec .nickname > ul > li:first-child {
+				margin-bottom: 5px;
+			}
+
+			.content1_sec .amount {
+				font-weight: bold;
+			}
+
+			.content1_sec .logout {
+				cursor: pointer;
+				font-weight: bold;
+			}
+
+			/* 배팅 리스트 테이블 영역 */
+			.content1_third {
+				width: 100%;
+				text-align: center;
+			}
+
+			.content1_third .list_top {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 15px 0;
+
+				font-size: 14px;
+			}
+
+			.sub_top > li:first-child {
+				margin-bottom: 5px;
+			}
+
+			.list_top li {
+			width: 100%;
+			}
+
+			.result_list li > p {
+				width: 100%;
+			
+			}
+			.result_list li + li {
+				margin-top: 7px;
+			}
+
+			.result_list > li {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				/* padding: 10px 5px; */
+				height: 35px;
+				line-height: 35px;
+
+				font-size: 12px;
+				font-weight: bold;
+				border-radius: 5px;
+				overflow: hidden;
+				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+				
+			}
+
+			.resut_cancel {
+				background-color: #fff;
+			}
+
+			.betting_box {
+				text-align: right;
+			}
+			.betting_result {
+				display: inline-block;
+				width: 40px;
+				height: 35px;
+				color: #fff;
+				background-color: #000;
+				text-align: center;
+				cursor: pointer;
+			}
+			/* content2 스타일링 */
+			.content2 {
+				width: 67%;
+				background-color: #fff;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+
+			.odd {
+				color: blueviolet;
+			}
+
+			.even {
+				color: red;
+			}
+
+			.text_left {
+				text-align: left;
+				padding-left: 7px;
+			}
+		</style>
 	</head>
-	<body></body>
+	<body>
+		<div id="container">
+			<div class="sidebar">
+				<ul class="sidebar_list">
+					<li><img src="./images/board.png" alt="판매내역 " /> 판매내역</li>
+					<li><img src="./images/board.png" alt="추첨결과 " /> 추첨결과</li>
+					<li><img src="./images/board.png" alt="충전 " /> 충전</li>
+					<li><img src="./images/board.png" alt="환전 " /> 환전</li>
+					<li><img src="./images/board.png" alt="머니내역 " /> 머니내역</li>
+					<li><img src="./images/board.png" alt="포인트 리스트 " /> 포인트</li>
+				</ul>
+				<span>프린트</span>
+			</div>
+			<div class="content1">
+				<!-- 로고 이미지 -->
+				<div class="content1_first">
+					<span class="title">QEEN SEVEN</span>
+				</div>
+
+				<!-- 닉네임, 금액, 로그아웃 -->
+				<div class="content1_sec">
+					<div class="nickname">
+						<ul>
+							<li>nonogook</li>
+							<li>한글닉네임</li>
+						</ul>
+					</div>
+					<div class="amount">2,903,000</div>
+					<div class="logout">로그아웃</div>
+				</div>
+
+				<!-- 배팅 리스트 테이블 -->
+				<div class="content1_third">
+					<ul class="list_top">
+						<li class="text_left">배팅리스트</li>
+						<li>배팅금</li>
+						<li>
+							<ul class="sub_top">
+								<li>123456회차</li>
+								<li>(161회)</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="result_list">
+						<li class="resut_cancel">
+							<p class="text_left">파월볼  <span class="odd">홀<span>(1.93)</p>
+							<p>1,000,000</p>
+							<p class="betting_box"> <span class="betting_result">취소</span></p>
+						</li>
+
+						<li class="resut_cancel">
+							<p class="text_left">파월볼  <span class="even">짝</span> <span class="odd">언더</span>(1.93)</p>
+							<p>1,000,000</p>
+							<p class="betting_box"> <span class="betting_result">취소</span></p>
+						</li>
+						<li class="result_win">
+							<p class="text_left">파월볼  <span class="even">짝</span> <span class="odd">언더</span>(1.93)</p>
+								<p>1,000,000</p>
+								<p class="betting_box"> <span class="betting_result">취소</span></p>
+						</li>
+						<li class="result_loss"></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="content2"></div>
+		</div>
+	</body>
 </html>
