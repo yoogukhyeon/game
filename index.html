@@ -663,7 +663,9 @@
 				}
 
 				// 모달창 보이기
-				document.getElementById('modal').style.display = 'block';
+				if(menuName !== "판매내역") {
+					document.getElementById('modal').style.display = 'block';
+				}
 
 				// 기존 리스너 제거
 				const chargeBtn = document.getElementById("charge-btn");
