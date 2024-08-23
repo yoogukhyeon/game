@@ -60,7 +60,7 @@
     right: -3px; /* 아이콘을 오른쪽 끝에 배치 */
     width: 18px;
     height: 18px;
-    background-image: url('./images/left_arrow.png'); /* 화살표 아이콘 이미지 경로 */
+    background-image: url('../images/left_arrow.png'); /* 화살표 아이콘 이미지 경로 */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -534,6 +534,11 @@ justify-content: space-between;
 align-items: center;
 padding: 0 30px;
 }
+
+.betting_money > p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .betting_reset_btn {
 background-color: #000;
 }
@@ -546,3 +551,50 @@ background-color: red;
 font-weight: bold;
 color: #000;
 }
+
+
+
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+}
+
+.pagination li {
+    margin: 0 5px;
+    padding: 5px;
+    color: #999;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination li img {
+    width: 11px; /* 아이콘의 크기에 맞게 조정 */
+    height: 11px; /* 아이콘의 크기에 맞게 조정 */
+}
+
+.pagination li:hover img {
+    opacity: 0.8; /* 호버 시 아이콘 투명도 조정 */
+}
+
+.pagination li:hover {
+    color: #f0f0f0;
+}
+
+.pagination .active {
+    font-weight: bold;
+    color: #000 !important;
+}
+
+
+
+
+
