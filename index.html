@@ -430,17 +430,19 @@
 		<!-- ********모달창******** -->
 		<!-- ******************** -->
 		<div id="modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span id="modal-title">
+            <div class="modal_content">
+				<div class="modal_header">
+                    <span id="modal_menu">
 						<!-- 모달 제목은 동적으로 추가됨 -->
 					</span>
-                    <span id="close-modal" class="close">&times;</span>
+                    <span id="close_modal" class="close">&times;</span>
                 </div>
-				<div id="modal-info">
+				<p class="modal_title">QEEN SEVEN</p>
+              
+				<div id="modal_info">
 					<!-- 모달 정보는 동적으로 추가됨 -->
 				</div>
-                <div class="modal-body" id="modal-body">
+                <div class="modal_body" id="modal_body">
                     <!-- 모달 내용이 여기에 동적으로 추가됨 -->
                 </div>
 
@@ -604,16 +606,16 @@
 			document.querySelectorAll('.sidebar_list li').forEach(function(item) {
 			item.addEventListener('click', function() {
 				const menuName = this.getAttribute('data-menu');
-				const modalTitle = document.getElementById('modal-title');
-				const modalBody = document.getElementById('modal-body');
-				const modalInfo = document.getElementById("modal-info");
+				const modalTitle = document.getElementById('modal_menu');
+				const modalBody = document.getElementById('modal_body');
+				const modalInfo = document.getElementById("modal_info");
 
 				modalTitle.innerText = menuName;
 				modalBody.innerHTML = modalData[menuName];
 
 				if (menuName === "충전") {
 					modalInfo.innerHTML = `
-						<div class="modal-section">
+						<div class="modal_section">
 							<div class="left">
 								<p>이름: nonogook</p>
 								<p>보유금액: 2,903,000</p>
@@ -627,7 +629,7 @@
 					`;
 				} else if (menuName === "환전") {
 					modalInfo.innerHTML = `
-						<div class="modal-section">
+						<div class="modal_section">
 							<div class="left">
 								<p>이름: nonogook</p>
 								<p>보유금액: 2,903,000</p>
@@ -641,7 +643,7 @@
 					`;
 				} else if (menuName === "포인트") {
 					modalInfo.innerHTML = `
-						<div class="modal-section">
+						<div class="modal_section">
 							<div class="left">
 								<p>이름: nonogook</p>
 								<p>보유포인트: 100</p>
@@ -652,6 +654,12 @@
 							</div>
 						</div>
 					`;
+				} else {
+					modalInfo.innerHTML = `
+						<div class="modal_section">
+							<p class="modal_name">nonogook</p>
+						</div>
+					`
 				}
 
 				// 모달창 보이기
@@ -695,7 +703,7 @@
 		}
 
 		// 모달 닫기 버튼 이벤트
-		document.getElementById('close-modal').addEventListener('click', function() {
+		document.getElementById('close_modal').addEventListener('click', function() {
 			document.getElementById('modal').style.display = 'none';
 		});
 

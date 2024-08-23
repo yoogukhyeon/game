@@ -12,60 +12,88 @@
     background-color: rgba(0, 0, 0, 0.4); /* 모달 바깥쪽 배경을 어둡게 처리 */
 }
 
-.modal-content {
+.modal_content {
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 20px;
     border-radius: 16px;
     width: 80%;
     max-width: 800px; /* 최대 너비를 설정 */
+   
 }
 
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+.modal_header {
+    background-color: #222;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 15px;
+    position: relative;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  
 }
 
-.modal-header #modal-title {
+.modal_header #modal_menu {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    color: #fff;
+}
+
+.modal_header .close {
     font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    filter: brightness(0) invert(1);
+}
+
+.modal_body {
+    margin-top: 20px;
+    padding: 0 20px;
+    min-height: 250px;
+}
+
+.modal_body table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.modal_body table thead {
     font-weight: bold;
 }
 
-.modal-header .close {
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-.modal-body {
-    margin-top: 20px;
-}
-
-.modal-body table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.modal-body table, th, td {
+.modal_body table, th, td {
     border: none; /* 테두리 제거 */
     
 }
 
-.modal-body th, .modal-body td {
+.modal_body th, .modal_body td {
     padding: 8px;
     word-wrap: break-word; /* 단어가 긴 경우 줄바꿈 처리 */
     white-space: nowrap; /* 줄바꿈 방지 */
 }
 
-.modal-body th {
+.modal_body th {
     background-color: #f0f0f0; /* 회색 배경 색상 */
     padding: 10px; /* 셀 안쪽 여백 설정 */
     text-align: left; /* 텍스트 왼쪽 정렬 */
 }
 
 
-.modal-body td {
+.modal_body td {
     padding: 10px; /* 셀 안쪽 여백 설정 */
+}
+
+
+.modal_section {
+ 
+    padding: 20px 0 
+}
+
+.modal_name {
+    text-align: center;
 }
