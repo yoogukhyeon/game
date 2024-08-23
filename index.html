@@ -21,6 +21,11 @@
 	</head>
 	<body>
 		<div id="container">
+
+	
+			<!-- ******************** -->
+			<!-- ********사이드바****** -->
+			<!-- ******************** -->
 			<div class="sidebar">
 				<ul class="sidebar_list">
 					<li data-menu="판매내역"><img src="./images/shopping_cart.png" alt="판매내역 " /> 판매내역</li>
@@ -32,6 +37,11 @@
 				</ul>
 				<span class="print">프린트</span>
 			</div>
+
+
+			<!-- ******************** -->
+			<!-- ********배팅결과****** -->
+			<!-- ******************** -->
 			<div class="content1">
 				<!-- 로고 이미지 -->
 				<div class="content1_first">
@@ -49,8 +59,6 @@
 					<div class="amount">2,903,000</div>
 					<div class="logout">로그아웃</div>
 				</div>
-
-				<!-- 배팅 리스트 테이블 -->
 				<div class="content1_third">
 					<ul class="list_top">
 						<li class="text_left">배팅리스트</li>
@@ -163,6 +171,10 @@
 				</div>
 			</div>
 
+
+			<!-- ******************** -->
+			<!-- ********메인********* -->
+			<!-- ******************** -->
 			<div class="content2">
 				<div class="game_box">
 					<div>
@@ -413,18 +425,26 @@
 		</div>
 
 
-		<!-- 모달창 -->
+
+		<!-- ******************** -->
+		<!-- ********모달창******** -->
+		<!-- ******************** -->
 		<div id="modal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <span id="modal-title"></span>
+                    <span id="modal-title">
+						<!-- 모달 제목은 동적으로 추가됨 -->
+					</span>
                     <span id="close-modal" class="close">&times;</span>
                 </div>
+				<div id="modal-info">
+					<!-- 모달 정보는 동적으로 추가됨 -->
+				</div>
                 <div class="modal-body" id="modal-body">
                     <!-- 모달 내용이 여기에 동적으로 추가됨 -->
                 </div>
 
-					<!-- 페이지네이션 추가 -->
+					<!-- 페이지네이션 -->
 				<div class="pagination" id="pagination">
 					<ul>
 						<li class="prev disabled"><img src="./images/left_arrow.png" alt="Previous" /></li>
@@ -581,31 +601,110 @@
             };
 
             // 사이드바 리스트 아이템에 클릭 이벤트 추가
-            document.querySelectorAll('.sidebar_list li').forEach(function(item) {
-                item.addEventListener('click', function() {
-                    var menuName = this.getAttribute('data-menu');
-                    var modalTitle = document.getElementById('modal-title');
-                    var modalBody = document.getElementById('modal-body');
+			document.querySelectorAll('.sidebar_list li').forEach(function(item) {
+			item.addEventListener('click', function() {
+				const menuName = this.getAttribute('data-menu');
+				const modalTitle = document.getElementById('modal-title');
+				const modalBody = document.getElementById('modal-body');
+				const modalInfo = document.getElementById("modal-info");
 
-                    modalTitle.innerText = menuName;
-                    modalBody.innerHTML = modalData[menuName];
+				modalTitle.innerText = menuName;
+				modalBody.innerHTML = modalData[menuName];
 
-                    // 모달창 보이기
-                    document.getElementById('modal').style.display = 'block';
-                });
-            });
+				if (menuName === "충전") {
+					modalInfo.innerHTML = `
+						<div class="modal-section">
+							<div class="left">
+								<p>이름: nonogook</p>
+								<p>보유금액: 2,903,000</p>
+								<p>포인트: 100</p>
+							</div>
+							<div class="right">
+								<p>금액: 50,000</p>
+								<button id="charge-btn">충전신청</button>
+							</div>
+						</div>
+					`;
+				} else if (menuName === "환전") {
+					modalInfo.innerHTML = `
+						<div class="modal-section">
+							<div class="left">
+								<p>이름: nonogook</p>
+								<p>보유금액: 2,903,000</p>
+								<p>포인트: 100</p>
+							</div>
+							<div class="right">
+								<p>금액: 50,000</p>
+								<button id="exchange-btn">환전신청</button>
+							</div>
+						</div>
+					`;
+				} else if (menuName === "포인트") {
+					modalInfo.innerHTML = `
+						<div class="modal-section">
+							<div class="left">
+								<p>이름: nonogook</p>
+								<p>보유포인트: 100</p>
+							</div>
+							<div class="right">
+								<p>포인트 사용: 10</p>
+								<button id="point-btn">포인트 사용신청</button>
+							</div>
+						</div>
+					`;
+				}
 
-            // 모달 닫기 버튼 이벤트
-            document.getElementById('close-modal').addEventListener('click', function() {
-                document.getElementById('modal').style.display = 'none';
-            });
+				// 모달창 보이기
+				document.getElementById('modal').style.display = 'block';
 
-            // 모달 외부 클릭 시 닫기
-            window.addEventListener('click', function(event) {
-                if (event.target == document.getElementById('modal')) {
-                    document.getElementById('modal').style.display = 'none';
-                }
-            });
+				// 기존 리스너 제거
+				const chargeBtn = document.getElementById("charge-btn");
+				const exchangeBtn = document.getElementById("exchange-btn");
+				const pointBtn = document.getElementById("point-btn");
+
+				if (chargeBtn) {
+					chargeBtn.removeEventListener("click", handleCharge);
+					chargeBtn.addEventListener("click", handleCharge);
+				}
+
+				if (exchangeBtn) {
+					exchangeBtn.removeEventListener("click", handleExchange);
+					exchangeBtn.addEventListener("click", handleExchange);
+				}
+
+				if (pointBtn) {
+					pointBtn.removeEventListener("click", handlePoint);
+					pointBtn.addEventListener("click", handlePoint);
+				}
+			});
+		});
+
+		//충전신청 함수
+		function handleCharge() {
+			alert("충전신청이 완료되었습니다.");
+		}
+
+		//환전신청 함수
+		function handleExchange() {
+			alert("환전신청이 완료되었습니다.");
+		}
+
+		//포인트 사용신청 함수
+		function handlePoint() {
+			alert("포인트 사용신청이 완료되었습니다.");
+		}
+
+		// 모달 닫기 버튼 이벤트
+		document.getElementById('close-modal').addEventListener('click', function() {
+			document.getElementById('modal').style.display = 'none';
+		});
+
+		// 모달 외부 클릭 시 닫기
+		window.addEventListener('click', function(event) {
+			if (event.target == document.getElementById('modal')) {
+				document.getElementById('modal').style.display = 'none';
+			}
+		});
         </script>
 	</body>
 
