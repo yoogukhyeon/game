@@ -1,100 +1,182 @@
 /* 모달 스타일링 */
 .modal {
-    display: none; /* 기본적으로 모달을 숨김 */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4); /* 모달 바깥쪽 배경을 어둡게 처리 */
+	display: none; /* 기본적으로 모달을 숨김 */
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4); /* 모달 바깥쪽 배경을 어둡게 처리 */
 }
 
 .modal_content {
-   background-color: #fefefe;
-   border-radius: 16px;
-   width: 80%;
-   max-width: 800px; /* 최대 너비를 설정 */
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%)
+	background-color: #fefefe;
+	border-radius: 16px;
+	width: 80%;
+	max-width: 1050px; /* 최대 너비를 설정 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .modal_header {
-    background-color: #222;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    margin-bottom: 15px;
-    position: relative;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-  
+	background-color: #222;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 30px;
+	position: relative;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
 }
 
 .modal_header #modal_menu {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    display: block;
-    color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	color: #fff;
 }
 
 .modal_header .close {
-    font-size: 1.5em;
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 0;
-    filter: brightness(0) invert(1);
+	font-size: 1.5em;
+	cursor: pointer;
+	position: absolute;
+	right: 15px;
+	top: 0;
+	filter: brightness(0) invert(1);
 }
 
 .modal_body {
-    margin-top: 20px;
-    padding: 0 20px;
-    min-height: 250px;
+	margin-top: 50px;
+	padding: 0 20px;
+	min-height: 250px;
 }
 
+//모달 테이블
 .modal_body table {
-    width: 100%;
-    border-collapse: collapse;
-
+	width: 100%;
+	border-collapse: collapse;
 }
 
 .modal_body table thead {
-    font-weight: bold;
+	font-weight: bold;
 }
 
-.modal_body table, th, td {
-    border: none; /* 테두리 제거 */
-    
+.modal_body table,
+th,
+td {
+	border: none; /* 테두리 제거 */
 }
 
-.modal_body th, .modal_body td {
-    padding: 8px;
-    word-wrap: break-word; /* 단어가 긴 경우 줄바꿈 처리 */
-    white-space: nowrap; /* 줄바꿈 방지 */
+.modal_body th,
+.modal_body td {
+	padding: 8px;
+	word-wrap: break-word; /* 단어가 긴 경우 줄바꿈 처리 */
+	//white-space: nowrap; /* 줄바꿈 방지 */
 }
 
 .modal_body th {
-    background-color: #f0f0f0; /* 회색 배경 색상 */
-    padding: 10px; /* 셀 안쪽 여백 설정 */
-    text-align: left; /* 텍스트 왼쪽 정렬 */
+	background-color: #f0f0f0; /* 회색 배경 색상 */
+	padding: 10px; /* 셀 안쪽 여백 설정 */
+	text-align: left; /* 텍스트 왼쪽 정렬 */
 }
-
 
 .modal_body td {
-    padding: 10px; /* 셀 안쪽 여백 설정 */
+	padding: 10px; /* 셀 안쪽 여백 설정 */
+	font-weight: bold;
 }
-
 
 .modal_section {
- 
-    padding: 20px 0 
+	padding: 20px 0 50px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	font-weight: bold;
+    border-bottom: 1px solid #333;
 }
 
-.modal_name {
-    text-align: center;
+.right > li {
+    width: 230px;
+	margin-bottom: 10px;
+    font-size: 16px;
 }
+.right > li > button {
+    border: none;
+    outline: none;
+    width: 100%;
+	background-color: red;
+	color: #fff;
+    height: 40px;
+    line-height: 40px;
+	border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.right > li > input {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 7px;
+    border: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: #eee;
+    outline: none;
+    
+}
+
+.right > li > input::placeholder {
+    font-size: 12px;
+    color: #999;
+}
+
+
+.right .modal_name {
+	text-align: center;
+	font-weight: bold;
+}
+
+.left > p + p {
+	margin-top: 18px;
+}
+
+.modal_result_list {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 5px;
+}
+
+.modal_result_list li {
+	padding: 7px;
+	border-radius: 7px;
+	font-size: 14px;
+}
+
+.modal_result_odd {
+	background-color: #50bcdf;
+	color: #fff;
+}
+.modal_result_even {
+	background-color: red;
+	color: #fff;
+}
+.modal_result_big {
+	background-color: blue;
+	color: #fff;
+}
+
+.modal_title {
+	font-size: 24px;
+	font-weight: bold;
+	color: #000000;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 텍스트에 그림자 추가 */
+	text-align: center;
+  

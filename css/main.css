@@ -99,14 +99,6 @@
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 텍스트에 그림자 추가 */
 }
 
-.modal_title {
-	font-size: 24px;
-	font-weight: bold;
-	color: #000000;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 텍스트에 그림자 추가 */
-	text-align: center;
-}
-
 .content1_first img {
 	max-width: 100%;
 	height: auto;
@@ -289,7 +281,7 @@
 
 .result_box {
 	display: grid;
-	grid-template-columns: 30% 69%;
+	grid-template-columns: 1fr 2fr;
 	grid-gap: 10px;
 	grid-auto-rows: auto;
 	height: 100%;
@@ -503,7 +495,7 @@
 
 .result_box_right_betting {
 	display: grid;
-	grid-template-columns: 47.3% 25% 25%;
+	grid-template-columns: 2fr 1fr 1fr;
 	grid-gap: 10px;
 }
 
