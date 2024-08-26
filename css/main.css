@@ -102,11 +102,18 @@
 }
 
 .link_list > li {
-  border: 1px solid #222;
-  padding: 5px;
+  background: #5dc8cd;
+  padding: 8px 5px;
   cursor: pointer;
-  font-size: 10px;
-  border-radius: 7px;
+  font-size: 11px;
+  border-radius: 5px;
+  transition: all 0.2s;
+  overflow: hidden;
+  color: #fff;
+}
+
+.link_list > li:hover {
+  background: #01939a;
 }
 
 /* .title 스타일 수정 */
@@ -119,6 +126,12 @@
 
 .content1_first img {
   max-width: 100%;
+  height: auto;
+}
+
+.title img {
+  max-width: 100%;
+  width: 200px;
   height: auto;
 }
 
