@@ -614,3 +614,20 @@
   font-size: 14px;
   color: #777;
 }
+
+.modal_money_box {
+  max-width: 580px;
+  width: 100%;
+  margin: 30px auto 0;
+}
+
+.modal_money {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
