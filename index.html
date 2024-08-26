@@ -1,476 +1,498 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>home</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
 
-		<!-- css 초기화 -->
-		<link rel="stylesheet" href="./css/common/reset.css" />
+    <!-- css 초기화 -->
+    <link rel="stylesheet" href="./css/common/reset.css" />
 
-		<!-- css 공통 사용 -->
-		<link rel="stylesheet" href="./css/common/common.css" />
+    <!-- css 공통 사용 -->
+    <link rel="stylesheet" href="./css/common/common.css" />
 
-		<!-- css 메인 사용 -->
-		<link rel="stylesheet" href="./css/main.css" />
+    <!-- css 메인 사용 -->
+    <link rel="stylesheet" href="./css/main.css" />
 
-		<!-- css 모달 사용 -->
-		<link rel="stylesheet" href="./css/modal.css" />
+    <!-- css 모달 사용 -->
+    <link rel="stylesheet" href="./css/modal.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- ******************** -->
+      <!-- ********사이드바****** -->
+      <!-- ******************** -->
+      <div class="sidebar">
+        <ul class="sidebar_list">
+          <li data-menu="판매내역">
+            <img src="./images/shopping_cart.png" alt="판매내역 " /> 판매내역
+          </li>
+          <li data-menu="추첨결과"><img src="./images/board.png" alt="추첨결과 " /> 추첨결과</li>
+          <li data-menu="충전"><img src="./images/crypto.png" alt="충전 " /> 충전</li>
+          <li data-menu="환전"><img src="./images/exchange.png" alt="환전 " /> 환전</li>
+          <li data-menu="머니내역">
+            <img src="./images/money-bag.png" alt="머니내역 " /> 머니내역
+          </li>
+          <li data-menu="포인트">
+            <img src="./images/loyal-customer.png" alt="포인트 리스트 " /> 포인트
+          </li>
+        </ul>
+        <span class="print">프린트</span>
+      </div>
 
-
-	</head>
-	<body>
-		<div id="container">
-
-	
-			<!-- ******************** -->
-			<!-- ********사이드바****** -->
-			<!-- ******************** -->
-			<div class="sidebar">
-				<ul class="sidebar_list">
-					<li data-menu="판매내역"><img src="./images/shopping_cart.png" alt="판매내역 " /> 판매내역</li>
-					<li data-menu="추첨결과"><img src="./images/board.png" alt="추첨결과 " /> 추첨결과</li>
-					<li data-menu="충전"><img src="./images/crypto.png" alt="충전 " /> 충전</li>
-					<li data-menu="환전"><img src="./images/exchange.png" alt="환전 " /> 환전</li>
-					<li data-menu="머니내역"><img src="./images/money-bag.png" alt="머니내역 " /> 머니내역</li>
-					<li data-menu="포인트"><img src="./images/loyal-customer.png" alt="포인트 리스트 " /> 포인트</li>
-				</ul>
-				<span class="print">프린트</span>
-			</div>
-
-
-			<!-- ******************** -->
-			<!-- ********배팅결과****** -->
-			<!-- ******************** -->
-			<div class="content1">
-				<!-- 로고 이미지 -->
-				<div class="content1_first">
-					<span class="title">QEEN SEVEN</span>
-					<ul class="link_list">
-						<li><a href="#" target="_blank">사이트</a></li>
-						<li><a href="#" target="_blank">사이트</a></li>
-						<li><a href="#" target="_blank">사이트</a></li>
-					</ul>
-				</div>
-
-				<!-- 닉네임, 금액, 로그아웃 -->
-				<div class="content1_sec">
-					<div class="nickname">
-						<ul>
-							<li>nonogook</li>
-							<li>한글닉네임</li>
-						</ul>
-					</div>
-					<div class="amount">2,903,000</div>
-					<div class="logout">로그아웃</div>
-				</div>
-				<div class="content1_third">
-					<ul class="list_top">
-						<li class="text_left">배팅리스트</li>
-						<li>배팅금</li>
-						<li>
-							<ul class="sub_top">
-								<li>123456회차</li>
-								<li>(161회)</li>
-							</ul>
-						</li>
-					</ul>
-					<ul class="result_list">
-						<li class="resut_cancel">
-							<p class="text_left">파월볼  <span class="odd">홀<span>(1.93)</p>
-							<p>1,000,000</p>
-							<p class="betting_box"> <span class="betting_cancel">취소</span></p>
-						</li>
-
-						<li class="resut_cancel">
-							<p class="text_left">파월볼  <span class="even">짝</span> <span class="odd">언더</span>(1.93)</p>
-							<p>1,000,000</p>
-							<p class="betting_box"> <span class="betting_cancel">취소</span></p>
-						</li>
-						<li class="resut_cancel">
-							<p class="text_left">파월볼  <span class="even">짝</span> <span class="odd">언더</span>(1.93)</p>
-								<p>1,000,000</p>
-								<p class="betting_box"> <span class="betting_cancel">취소</span></p>
-						</li>
-						<li class="result_win">
-							<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-						<li class="result_win">
-							<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_loss">낙첨</span></p>
-						</li>
-						<li class="result_win">
-							<p class="text_left">파워볼 짝(1.93)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-						<li class="result_loss">
-							<p class="text_left">파워볼 <span class="even">짝</span> (1.93)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-
-						<li class="result_loss">
-							<p class="text_left">파워볼 <span class="odd">홀</span> (1.93)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_loss">당첨</span></p>
-						</li>
-						<li class="result_loss">
-							<p class="text_left">파워볼 <span class="even">짝</span> (1.93)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-
-						<li class="result_win">
-							<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-						<li class="result_win">
-							<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_loss">낙첨</span></p>
-						</li>
-						<li class="result_win">
-							<p class="text_left">파워볼 짝(1.93)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-
-						<li class="result_loss">
-							<p class="text_left">파워볼 <span class="even">짝</span> (1.93)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-
-						<li class="result_loss">
-							<p class="text_left">파워볼 <span class="odd">홀</span> (1.93)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_loss">당첨</span></p>
-						</li>
-						<li class="result_loss">
-							<p class="text_left">파워볼 <span class="even">짝</span> (1.93)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-
-						<li class="result_win">
-							<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-						<li class="result_win">
-							<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_loss">낙첨</span></p>
-						</li>
-						<li class="result_win">
-							<p class="text_left">파워볼 짝(1.93)</p>
-							<p>500,000 <span class="plus">+3,500,000</span></p>
-							<p class="betting_box"> <span class="betting_win">당첨</span></p>
-						</li>
-					</ul>
-					<p ><button class="more_btn">
-						더보기 +
-					</button></p>
-				</div>
-			</div>
-
-
-			<!-- ******************** -->
-			<!-- ********메인********* -->
-			<!-- ******************** -->
-			<div class="content2">
-				<div class="game_box">
-					<div>
-						<h2 class="game_title">파워볼</h2>
-						<ul class="game_list">
-							<li>
-								<span class="game_txt game_txt_odd">홀</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">짝</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_odd">언더</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_odd"><span class="game_txt_even">짝</span> 언더</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-
-							<li>
-								<span class="game_txt game_txt_odd">홀 <span class="game_txt_even">오버</span></span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">짝 오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h2 class="game_title">일반볼</h2>
-						<ul class="game_list">
-							<li>
-								<span class="game_txt game_txt_odd">홀</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">짝</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_odd">언더</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_odd"><span class="game_txt_even">짝</span> 언더</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-
-							<li>
-								<span class="game_txt game_txt_odd">홀 <span class="game_txt_even">오버</span></span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">짝 오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h2 class="game_title">2묶음조합</h2>
-						<ul class="game_list">
-							<li>
-								<span class="game_txt game_txt_odd">홀</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">짝</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_odd">언더</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_odd"><span class="game_txt_even">짝</span> 언더</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-
-							<li>
-								<span class="game_txt game_txt_odd">홀 <span class="game_txt_even">오버</span></span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">짝 오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h2 class="game_title">3묶음조합</h2>
-						<ul class="game_list">
-							<li>
-								<span class="game_txt game_txt_even">홀 <span class="game_txt_small">언더</span> 파홀</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li class="game_active">
-								<span class="game_txt game_txt_even">홀 <span class="game_txt_small">언더</span> <span class="game_txt_odd">파짝</span></span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_odd">언더</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_odd"><span class="game_txt_even">짝</span> 언더</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-
-							<li>
-								<span class="game_txt game_txt_odd">홀 <span class="game_txt_even">오버</span></span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">짝 오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-							<li>
-								<span class="game_txt game_txt_even">오버</span>
-								<span class="game_number">1.93</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="number_box">
-					<div>
-						<h2 class="game_title">파워볼 숫자 맞추기</h2>
-						<ul class="number_list">
-							<li>
-								<span class="number_txt">1</span>
-								<span class="game_number">9.00</span>
-							</li>
-							<li>
-								<span class="number_txt">2</span>
-								<span class="game_number">9.00</span>
-							</li>
-							<li class="game_active">
-								<span class="number_txt">3</span>
-								<span class="game_number">9.00</span>
-							</li>
-							<li>
-								<span class="number_txt">4</span>
-								<span class="game_number">9.00</span>
-							</li>
-							<li>
-								<span class="number_txt">5</span>
-								<span class="game_number">9.00</span>
-							</li>
-							<li>
-								<span class="number_txt">6</span>
-								<span class="game_number">9.00</span>
-							</li>
-							<li>
-								<span class="number_txt">7</span>
-								<span class="game_number">9.00</span>
-							</li>
-							<li>
-								<span class="number_txt">8</span>
-								<span class="game_number">9.00</span>
-							</li>
-							<li>
-								<span class="number_txt">9</span>
-								<span class="game_number">9.00</span>
-							</li>
-						
-						</ul>
-					</div>
-				</div>
-				<div class="result_box">
-					<div class="result_box_left">
-						<h2 class="info_title">이전회차 당첨결과</h2>
-						
-						<div>
-							<strong class="result_power_txt">파워볼</strong>
-							<ul class="result_box_left_list">
-								<li class="reset_box_left_even">짝</li>
-								<li class="reset_box_left_under">언더</li>
-								<li class="reset_box_left_number">4</li>
-							</ul>
-						</div>
-						<div>
-							<strong class="result_normal_txt">일반볼</strong>
-							<ul class="result_box_left_list">
-								<li class="reset_box_left_even">짝</li>
-								<li class="reset_box_left_under">언더</li>
-								<li  class="reset_box_left_big">대</li>
-							</ul>
-						</div>
-					</div>
-					<div class="result_box_right">
-						<h2 class="info_title">배팅마감 05:00</h2>
-						<div>
-							<ul class="result_box_right_money_list">
-							<li>10,000</li>
-							<li >30,000</li>
-							<li>200,000</li>
-							<li class="money_active">300,000</li>
-							<li>50,000</li>
-							<li>100,000</li>
-							<li>500,000</li>
-							<li>1,000,000</li>
-						</ul></div>
-						<div>
-							<ul class="result_box_right_betting">
-								<li class="betting_money">
-									<p>
-									<span class="odd">홀 언더</span><span class="even"> 파짝</span></p>
-									<span class="money">300,000원</span>
-								</li>
-								<li class="betting_reset_btn">초기화</li>
-								<li class="betting_btn">배팅</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-		<!-- ******************** -->
-		<!-- ********모달창******** -->
-		<!-- ******************** -->
-		<div id="modal" class="modal">
-            <div class="modal_content">
-				<div class="modal_header">
-                    <span id="modal_menu">
-						<!-- 모달 제목은 동적으로 추가됨 -->
-					</span>
-                    <span id="close_modal" class="close">&times;</span>
-                </div>
-				<p class="modal_title">QEEN SEVEN</p>
-              
-				<div id="modal_info">
-					<!-- 모달 정보는 동적으로 추가됨 -->
-				</div>
-                <div class="modal_body" id="modal_body">
-                    <!-- 모달 내용이 여기에 동적으로 추가됨 -->
-                </div>
-
-					<!-- 페이지네이션 -->
-				<div class="pagination" id="pagination">
-					<ul>
-						<li class="prev disabled"><img src="./images/left_arrow.png" alt="Previous" /></li>
-						<li class="active">1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-						<li class="next"><img src="./images/right_arrow.png" alt="Next" /></li>
-					</ul>
-				</div>
-            </div>
+      <!-- ******************** -->
+      <!-- ********배팅결과****** -->
+      <!-- ******************** -->
+      <div class="content1">
+        <!-- 로고 이미지 -->
+        <div class="content1_first">
+          <span class="title">QEEN SEVEN</span>
+          <ul class="link_list">
+            <li><a href="#" target="_blank">사이트</a></li>
+            <li><a href="#" target="_blank">사이트</a></li>
+            <li><a href="#" target="_blank">사이트</a></li>
+          </ul>
         </div>
-		<script>
-            // 모달 데이터 정의
-            const modalData = {
-				"판매내역": `
+
+        <!-- 닉네임, 금액, 로그아웃 -->
+        <div class="content1_sec">
+          <div class="nickname">
+            <ul>
+              <li>nonogook</li>
+              <li>한글닉네임</li>
+            </ul>
+          </div>
+          <div class="amount">2,903,000</div>
+          <div class="logout">로그아웃</div>
+        </div>
+        <div class="content1_third">
+          <ul class="list_top">
+            <li class="text_left">배팅리스트</li>
+            <li>배팅금</li>
+            <li>
+              <ul class="sub_top">
+                <li>123456회차</li>
+                <li>(161회)</li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- 배팅 내역 없을때 -->
+          <p class="result_not_text">배팅 내역이 없습니다.</p>
+
+          <!-- <ul class="result_list">
+				<li class="resut_cancel">
+					<p class="text_left">파월볼  <span class="odd">홀<span>(1.93)</p>
+					<p>1,000,000</p>
+					<p class="betting_box"> <span class="betting_cancel">취소</span></p>
+				</li>
+
+				<li class="resut_cancel">
+					<p class="text_left">파월볼  <span class="even">짝</span> <span class="odd">언더</span>(1.93)</p>
+					<p>1,000,000</p>
+					<p class="betting_box"> <span class="betting_cancel">취소</span></p>
+				</li>
+				<li class="resut_cancel">
+					<p class="text_left">파월볼  <span class="even">짝</span> <span class="odd">언더</span>(1.93)</p>
+						<p>1,000,000</p>
+						<p class="betting_box"> <span class="betting_cancel">취소</span></p>
+				</li>
+				<li class="result_win">
+					<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+				<li class="result_win">
+					<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_loss">낙첨</span></p>
+				</li>
+				<li class="result_win">
+					<p class="text_left">파워볼 짝(1.93)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+				<li class="result_loss">
+					<p class="text_left">파워볼 <span class="even">짝</span> (1.93)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+
+				<li class="result_loss">
+					<p class="text_left">파워볼 <span class="odd">홀</span> (1.93)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_loss">당첨</span></p>
+				</li>
+				<li class="result_loss">
+					<p class="text_left">파워볼 <span class="even">짝</span> (1.93)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+
+				<li class="result_win">
+					<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+				<li class="result_win">
+					<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_loss">낙첨</span></p>
+				</li>
+				<li class="result_win">
+					<p class="text_left">파워볼 짝(1.93)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+
+				<li class="result_loss">
+					<p class="text_left">파워볼 <span class="even">짝</span> (1.93)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+
+				<li class="result_loss">
+					<p class="text_left">파워볼 <span class="odd">홀</span> (1.93)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_loss">당첨</span></p>
+				</li>
+				<li class="result_loss">
+					<p class="text_left">파워볼 <span class="even">짝</span> (1.93)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+
+				<li class="result_win">
+					<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+				<li class="result_win">
+					<p class="text_left">3묶음 홀언더 파짝(7.10)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_loss">낙첨</span></p>
+				</li>
+				<li class="result_win">
+					<p class="text_left">파워볼 짝(1.93)</p>
+					<p>500,000 <span class="plus">+3,500,000</span></p>
+					<p class="betting_box"> <span class="betting_win">당첨</span></p>
+				</li>
+			</ul>
+			<p ><button class="more_btn">
+				더보기 +
+			</button></p>  -->
+        </div>
+      </div>
+
+      <!-- ******************** -->
+      <!-- ********메인********* -->
+      <!-- ******************** -->
+      <div class="content2">
+        <div class="game_box">
+          <div>
+            <h2 class="game_title">파워볼</h2>
+            <ul class="game_list">
+              <li>
+                <span class="game_txt game_txt_odd">홀</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">짝</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_odd">언더</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_odd"
+                  ><span class="game_txt_even">짝</span> 언더</span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+
+              <li>
+                <span class="game_txt game_txt_odd"
+                  >홀 <span class="game_txt_even">오버</span></span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">짝 오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="game_title">일반볼</h2>
+            <ul class="game_list">
+              <li>
+                <span class="game_txt game_txt_odd">홀</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">짝</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_odd">언더</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_odd"
+                  ><span class="game_txt_even">짝</span> 언더</span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+
+              <li>
+                <span class="game_txt game_txt_odd"
+                  >홀 <span class="game_txt_even">오버</span></span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">짝 오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="game_title">2묶음조합</h2>
+            <ul class="game_list">
+              <li>
+                <span class="game_txt game_txt_odd">홀</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">짝</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_odd">언더</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_odd"
+                  ><span class="game_txt_even">짝</span> 언더</span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+
+              <li>
+                <span class="game_txt game_txt_odd"
+                  >홀 <span class="game_txt_even">오버</span></span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">짝 오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="game_title">3묶음조합</h2>
+            <ul class="game_list">
+              <li>
+                <span class="game_txt game_txt_even"
+                  >홀 <span class="game_txt_small">언더</span> 파홀</span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li class="game_active">
+                <span class="game_txt game_txt_even"
+                  >홀 <span class="game_txt_small">언더</span>
+                  <span class="game_txt_odd">파짝</span></span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_odd">언더</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_odd"
+                  ><span class="game_txt_even">짝</span> 언더</span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+
+              <li>
+                <span class="game_txt game_txt_odd"
+                  >홀 <span class="game_txt_even">오버</span></span
+                >
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">짝 오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+              <li>
+                <span class="game_txt game_txt_even">오버</span>
+                <span class="game_number">1.93</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="number_box">
+          <div>
+            <h2 class="game_title">파워볼 숫자 맞추기</h2>
+            <ul class="number_list">
+              <li>
+                <span class="number_txt">1</span>
+                <span class="game_number">9.00</span>
+              </li>
+              <li>
+                <span class="number_txt">2</span>
+                <span class="game_number">9.00</span>
+              </li>
+              <li class="game_active">
+                <span class="number_txt">3</span>
+                <span class="game_number">9.00</span>
+              </li>
+              <li>
+                <span class="number_txt">4</span>
+                <span class="game_number">9.00</span>
+              </li>
+              <li>
+                <span class="number_txt">5</span>
+                <span class="game_number">9.00</span>
+              </li>
+              <li>
+                <span class="number_txt">6</span>
+                <span class="game_number">9.00</span>
+              </li>
+              <li>
+                <span class="number_txt">7</span>
+                <span class="game_number">9.00</span>
+              </li>
+              <li>
+                <span class="number_txt">8</span>
+                <span class="game_number">9.00</span>
+              </li>
+              <li>
+                <span class="number_txt">9</span>
+                <span class="game_number">9.00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="result_box">
+          <div class="result_box_left">
+            <h2 class="info_title">이전회차 당첨결과</h2>
+
+            <div>
+              <strong class="result_power_txt">파워볼</strong>
+              <ul class="result_box_left_list">
+                <li class="reset_box_left_even">짝</li>
+                <li class="reset_box_left_under">언더</li>
+                <li class="reset_box_left_number">4</li>
+              </ul>
+            </div>
+            <div>
+              <strong class="result_normal_txt">일반볼</strong>
+              <ul class="result_box_left_list">
+                <li class="reset_box_left_even">짝</li>
+                <li class="reset_box_left_under">언더</li>
+                <li class="reset_box_left_big">대</li>
+              </ul>
+            </div>
+          </div>
+          <div class="result_box_right">
+            <h2 class="info_title">배팅마감 05:00</h2>
+            <div>
+              <ul class="result_box_right_money_list">
+                <li>10,000</li>
+                <li>30,000</li>
+                <li>200,000</li>
+                <li class="money_active">300,000</li>
+                <li>50,000</li>
+                <li>100,000</li>
+                <li>500,000</li>
+                <li>1,000,000</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="result_box_right_betting">
+                <li class="betting_money">
+                  <p><span class="odd">홀 언더</span><span class="even"> 파짝</span></p>
+                  <span class="money">300,000원</span>
+                </li>
+                <li class="betting_reset_btn">초기화</li>
+                <li class="betting_btn">배팅</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ******************** -->
+    <!-- ********모달창******** -->
+    <!-- ******************** -->
+    <div id="modal" class="modal">
+      <div class="modal_content">
+        <div class="modal_header">
+          <span id="modal_menu">
+            <!-- 모달 제목은 동적으로 추가됨 -->
+          </span>
+          <span id="close_modal" class="close">&times;</span>
+        </div>
+        <p class="modal_title">QEEN SEVEN</p>
+
+        <div id="modal_info">
+          <!-- 모달 정보는 동적으로 추가됨 -->
+        </div>
+        <div class="modal_body" id="modal_body">
+          <!-- 모달 내용이 여기에 동적으로 추가됨 -->
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div class="pagination" id="pagination">
+          <ul>
+            <li class="prev disabled"><img src="./images/left_arrow.png" alt="Previous" /></li>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li class="next"><img src="./images/right_arrow.png" alt="Next" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      // 모달 데이터 정의
+      const modalData = {
+        판매내역: `
                     <table>
                         <thead>
                             <tr>
@@ -502,7 +524,7 @@
                         </tbody>
                     </table>
                 `,
-                "추첨결과": `
+        추첨결과: `
                    <table>
                         <thead>
                             <tr>
@@ -558,7 +580,7 @@
                         </tbody>
                     </table>
                 `,
-                "충전": `
+        충전: `
                     <table>
                         <thead>
                             <tr>
@@ -587,7 +609,7 @@
                         </tbody>
                     </table>
                 `,
-                "환전": `
+        환전: `
                     <table>
                         <thead>
                             <tr>
@@ -616,7 +638,7 @@
                         </tbody>
                     </table>
                 `,
-                "머니내역": `
+        머니내역: `
                     <table>
                         <thead>
                             <tr>
@@ -652,7 +674,7 @@
                         </tbody>
                     </table>
                 `,
-                "포인트": `
+        포인트: `
                     <table>
                         <thead>
                             <tr>
@@ -680,22 +702,22 @@
                             </tr>
                         </tbody>
                     </table>
-                `
-            };
+                `,
+      };
 
-            // 사이드바 리스트 아이템에 클릭 이벤트 추가
-			document.querySelectorAll('.sidebar_list li').forEach(function(item) {
-			item.addEventListener('click', function() {
-				const menuName = this.getAttribute('data-menu');
-				const modalTitle = document.getElementById('modal_menu');
-				const modalBody = document.getElementById('modal_body');
-				const modalInfo = document.getElementById("modal_info");
+      // 사이드바 리스트 아이템에 클릭 이벤트 추가
+      document.querySelectorAll('.sidebar_list li').forEach(function (item) {
+        item.addEventListener('click', function () {
+          const menuName = this.getAttribute('data-menu');
+          const modalTitle = document.getElementById('modal_menu');
+          const modalBody = document.getElementById('modal_body');
+          const modalInfo = document.getElementById('modal_info');
 
-				modalTitle.innerText = menuName;
-				modalBody.innerHTML = modalData[menuName];
+          modalTitle.innerText = menuName;
+          modalBody.innerHTML = modalData[menuName];
 
-				if (menuName === "충전") {
-					modalInfo.innerHTML = `
+          if (menuName === '충전') {
+            modalInfo.innerHTML = `
 						<div class="modal_section">
 							<div class="left">
 								<p>nonogook</p>
@@ -708,8 +730,8 @@
 							</ul>
 						</div>
 					`;
-				} else if (menuName === "환전") {
-					modalInfo.innerHTML = `
+          } else if (menuName === '환전') {
+            modalInfo.innerHTML = `
 						<div class="modal_section">
 							<div class="left">
 								<p>nonogook</p>
@@ -722,8 +744,8 @@
 							</ul>
 						</div>
 					`;
-				} else if (menuName === "포인트") {
-					modalInfo.innerHTML = `
+          } else if (menuName === '포인트') {
+            modalInfo.innerHTML = `
 						<div class="modal_section">
 							<div class="left">
 								<p>nonogook</p>
@@ -736,70 +758,65 @@
 							</ul>
 						</div>
 					`;
-				} else {
-					modalInfo.innerHTML = `
+          } else {
+            modalInfo.innerHTML = `
 						<div class="modal_section">
 							<p class="modal_name">nonogook</p>
 						</div>
-					`
-				}
+					`;
+          }
 
-				// 모달창 보이기
-				document.getElementById('modal').style.display = 'block';
-				
+          // 모달창 보이기
+          document.getElementById('modal').style.display = 'block';
 
-				// 기존 리스너 제거
-				const chargeBtn = document.getElementById("charge-btn");
-				const exchangeBtn = document.getElementById("exchange-btn");
-				const pointBtn = document.getElementById("point-btn");
+          // 기존 리스너 제거
+          const chargeBtn = document.getElementById('charge-btn');
+          const exchangeBtn = document.getElementById('exchange-btn');
+          const pointBtn = document.getElementById('point-btn');
 
-				if (chargeBtn) {
-					chargeBtn.removeEventListener("click", handleCharge);
-					chargeBtn.addEventListener("click", handleCharge);
-				}
+          if (chargeBtn) {
+            chargeBtn.removeEventListener('click', handleCharge);
+            chargeBtn.addEventListener('click', handleCharge);
+          }
 
-				if (exchangeBtn) {
-					exchangeBtn.removeEventListener("click", handleExchange);
-					exchangeBtn.addEventListener("click", handleExchange);
-				}
+          if (exchangeBtn) {
+            exchangeBtn.removeEventListener('click', handleExchange);
+            exchangeBtn.addEventListener('click', handleExchange);
+          }
 
-				if (pointBtn) {
-					pointBtn.removeEventListener("click", handlePoint);
-					pointBtn.addEventListener("click", handlePoint);
-				}
-			});
-		});
+          if (pointBtn) {
+            pointBtn.removeEventListener('click', handlePoint);
+            pointBtn.addEventListener('click', handlePoint);
+          }
+        });
+      });
 
-		//충전신청 함수
-		function handleCharge() {
-			alert("충전신청이 완료되었습니다.");
-		}
+      //충전신청 함수
+      function handleCharge() {
+        alert('충전신청이 완료되었습니다.');
+      }
 
-		//환전신청 함수
-		function handleExchange() {
-			alert("환전신청이 완료되었습니다.");
-		}
+      //환전신청 함수
+      function handleExchange() {
+        alert('환전신청이 완료되었습니다.');
+      }
 
-		//포인트 사용신청 함수
-		function handlePoint() {
-			alert("포인트 사용신청이 완료되었습니다.");
-		}
+      //포인트 사용신청 함수
+      function handlePoint() {
+        alert('포인트 사용신청이 완료되었습니다.');
+      }
 
-		// 모달 닫기 버튼 이벤트
-		document.getElementById('close_modal').addEventListener('click', function() {
-			document.getElementById('modal').style.display = 'none';
-		});
+      // 모달 닫기 버튼 이벤트
+      document.getElementById('close_modal').addEventListener('click', function () {
+        document.getElementById('modal').style.display = 'none';
+      });
 
-		// 모달 외부 클릭 시 닫기
-		window.addEventListener('click', function(event) {
-			if (event.target == document.getElementById('modal')) {
-				document.getElementById('modal').style.display = 'none';
-			}
-		});
-        </script>
-	</body>
-
-	
+      // 모달 외부 클릭 시 닫기
+      window.addEventListener('click', function (event) {
+        if (event.target == document.getElementById('modal')) {
+          document.getElementById('modal').style.display = 'none';
+        }
+      });
+    </script>
+  </body>
 </html>
-
-

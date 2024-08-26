@@ -608,3 +608,9 @@
   background-color: #999;
   color: #fff;
 }
+
+.result_not_text {
+  padding: 15px 0;
+  font-size: 14px;
+  color: #777;
+}
