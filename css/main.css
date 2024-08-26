@@ -110,18 +110,11 @@
   transition: all 0.2s;
   overflow: hidden;
   color: #000;
+  background-color: #3fe87f;
 }
 
-.link_list > li:nth-child(1) {
+.link_list > li.active {
   background-color: yellow;
-}
-
-.link_list > li:nth-child(2) {
-  background-color: #3fe87f;
-}
-
-.link_list > li:nth-child(3) {
-  background-color: #3fe87f;
 }
 
 .link_list > li:hover {
