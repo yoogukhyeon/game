@@ -15,7 +15,7 @@ table {
 
 
 /* admin 모바일웹 사이즈 */
-#container {
+#admin_container {
     display: flex;
     justify-content: center;
     align-items: center;
