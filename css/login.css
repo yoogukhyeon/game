@@ -1,75 +1,75 @@
 /* login_wrap 스타일링 */
 .login_wrap {
-	background-image: url('../images/login_bg.jpeg'); /* 배경 이미지 경로 */
-	background-size: cover; /* 배경 이미지 전체 크기로 */
-	background-position: center; /* 배경 이미지 가운데 정렬 */
-	width: 100%;
-	height: 100vh; /* 화면 전체 높이 */
-	display: flex;
-	justify-content: center; /* 수평 중앙 정렬 */
-	align-items: center; /* 수직 중앙 정렬 */
+  background-image: url('../images/login_bg.jpeg'); /* 배경 이미지 경로 */
+  background-size: cover; /* 배경 이미지 전체 크기로 */
+  background-position: center; /* 배경 이미지 가운데 정렬 */
+  width: 100%;
+  height: 100vh; /* 화면 전체 높이 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
 }
 
 /* 로그인 박스 스타일링 */
 .login_box {
-	text-align: center;
-	width: 330px;
+  text-align: center;
+  width: 330px;
 }
 
 /* 로고 이미지 스타일링 */
 .login_box img {
-	width: 100%; /* 로고 이미지 크기 */
-	margin-bottom: 20px;
+  width: 100%; /* 로고 이미지 크기 */
+  margin-bottom: 20px;
 }
 
 /* 입력창을 감싸는 div 스타일링 */
 .input_container {
-	position: relative;
-	width: 100%;
-	margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 /* 입력창에 사용하는 이미지 스타일링 */
 .input_container img.login_icon {
-	position: absolute;
-	left: 15px;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 20px;
-	height: 20px;
-	filter: brightness(0) invert(1); /* 아이콘을 흰색으로 변환 */
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* 아이콘을 흰색으로 변환 */
 }
 
 /* 입력창 스타일링 */
 .input_container input[type='text'],
 .input_container input[type='password'] {
-	width: 100%;
-	padding: 15px 10px 15px 45px; /* 왼쪽 패딩을 늘려 아이콘 공간 확보 */
-	border-radius: 18px;
-	box-sizing: border-box;
-	outline: none;
-	background-color: #444;
-	color: #fff;
-	border: none;
+  width: 100%;
+  padding: 15px 10px 15px 45px; /* 왼쪽 패딩을 늘려 아이콘 공간 확보 */
+  border-radius: 18px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #444;
+  color: #fff;
+  border: none;
 }
 
 /* placeholder 글씨 흰색 설정 */
 .input_container input::placeholder {
-	color: #fff;
-	opacity: 0.8; /* 조금 더 투명하게 설정 (선택 사항) */
+  color: #fff;
+  opacity: 0.8; /* 조금 더 투명하게 설정 (선택 사항) */
 }
 
 /* 로그인 버튼 스타일링 */
 .login_box input[type='submit'] {
-	width: 100%;
-	padding: 15px 10px;
-	background-color: #d7954a;
-	color: white;
-	border: none;
-	border-radius: 18px;
-	cursor: pointer;
+  width: 100%;
+  padding: 15px 10px;
+  background-color: #d7954a;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
 }
 
 .login_box input[type='submit']:hover {
-	background-color: #0056b3;
+  background-color: #0056b3;
 }
