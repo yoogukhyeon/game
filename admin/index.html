@@ -49,6 +49,31 @@
         color: inherit;
         display: block;
         color: #fff;
+        position: relative;
+      }
+
+      .badge {
+        position: absolute;
+        top: -5px;
+        right: 30%;
+        color: #000;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .badge.red {
+        background-color: red;
+      }
+
+      .badge.blue {
+        background-color: skyblue;
       }
 
       /* 반응형 처리 */
@@ -60,6 +85,10 @@
         .nav-item img {
           width: 20px;
           height: 20px;
+        }
+
+        .badge {
+          right: 20%;
         }
       }
     </style>
@@ -97,12 +126,14 @@
         <a href="#">
           <img src="../images/crypto.png" alt="Charge" />
           <p>충전</p>
+          <span class="badge red">3</span>
         </a>
       </div>
       <div class="nav-item">
         <a href="#">
           <img src="../images/exchange.png" alt="Exchange" />
           <p>환전</p>
+          <span class="badge blue">3</span>
         </a>
       </div>
     </div>
