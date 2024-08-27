@@ -6,17 +6,105 @@
     <title>admin login</title>
 
     <!-- css 초기화 -->
-    <link rel="stylesheet" href="../../css/common/reset.css" />
+    <link rel="stylesheet" href="../css/common/reset.css" />
 
     <!-- css 공통 사용 -->
-    <link rel="stylesheet" href="../../css/common/common.css" />
+    <link rel="stylesheet" href="../css/common/common.css" />
 
     <!-- admin login css -->
-    <link rel="stylesheet" href="../../css/admin/admin.css" />
+    <link rel="stylesheet" href="../css/admin/admin.css" />
+
+    <style>
+      /* 하단 네비게이션 바 스타일 */
+      .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 768px;
+        background-color: #000;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+      }
+
+      .nav-item {
+        text-align: center;
+        font-size: 14px;
+        color: #333;
+        flex-grow: 1;
+      }
+
+      .nav-item img {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 5px;
+        filter: brightness(0) invert(1); /* 아이콘을 흰색으로 변환 */
+      }
+
+      .nav-item a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        color: #fff;
+      }
+
+      /* 반응형 처리 */
+      @media (max-width: 768px) {
+        .nav-item {
+          font-size: 12px;
+        }
+
+        .nav-item img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    </style>
   </head>
+
   <body>
     <div id="admin_container">
-      <div class="admin_wrap"><h2>123123</h2></div>
+      <div class="admin_wrap admin_main_wrap">
+        <div class="admin_box">
+          <img src="../../images/logo.jpeg" alt="Logo" />
+          <ul class="admin_category">
+            <li><a href="#">매장등록</a></li>
+            <li><a href="#">관리자등록</a></li>
+            <li><a href="#">매장관리</a></li>
+            <li><a href="#">배팅내역</a></li>
+            <li><a href="#">충전</a></li>
+            <li><a href="#">환전</a></li>
+            <li><a href="#">포인트내역</a></li>
+            <li><a href="#">게임관리</a></li>
+            <li><a href="#">정산</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 네비게이션 바 -->
+    <div class="bottom-nav">
+      <div class="nav-item">
+        <a href="#">
+          <img src="../images/home.png" alt="Main" />
+          <p>메인화면</p>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#">
+          <img src="../images/crypto.png" alt="Charge" />
+          <p>충전</p>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#">
+          <img src="../images/exchange.png" alt="Exchange" />
+          <p>환전</p>
+        </a>
+      </div>
     </div>
   </body>
 </html>
