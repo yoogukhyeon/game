@@ -36,3 +36,29 @@
   text-align: center;
   font-weight: bold;
 }
+
+.admin_category_wrap {
+  height: 100vh;
+  background-image: url('../../images/login_bg.jpeg'); /* 배경 이미지 경로 */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.admin_category_gnb {
+  background-color: #fff;
+  padding: 25px;
+  border-bottom-left-radius: 40px;
+}
+
+.admin_category_gnb > a > img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 25px;
+}
+
+.admin_category_gnb > p {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+}
