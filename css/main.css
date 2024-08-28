@@ -85,6 +85,19 @@
   overflow: scroll;
 }
 
+/* 배팅내역 블라인드  */
+.content1_bg {
+  background-color: #000;
+  opacity: 0.9;
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  left: 8%;
+  top: 0;
+  overflow: hidden;
+  z-index: 999;
+}
+
 /* 로고 이미지 영역 */
 .content1_first {
   margin-bottom: 20px;
