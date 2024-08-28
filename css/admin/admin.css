@@ -62,3 +62,23 @@
   color: #000;
   font-weight: bold;
 }
+
+.admin_category_box {
+  padding: 10px 20px;
+  max-height: calc(100vh - 210px);
+  overflow: auto;
+}
+
+.admin_category_txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.admin_category_txt > img {
+  width: 20px;
+  height: 20px;
+}

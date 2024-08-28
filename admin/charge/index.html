@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>충전</title>
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="../../css/common/reset.css" />
+
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="../../css/common/common.css" />
+
+    <!-- 관리자용 CSS -->
+    <link rel="stylesheet" href="../../css/admin/admin.css" />
+
+    <!-- 관리자용 네비게이션 CSS -->
+    <link rel="stylesheet" href="../../css/admin/nav_bar.css" />
+
+    <!-- 관리자용 충전 & 교환 -->
+    <link rel="stylesheet" href="../../css/admin/charge_exchange.css" />
+
+    <!-- 관리자용 JS (비동기 로드) -->
+    <script src="../../script/admin.js" type="module" async></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="admin_container">
+      <div class="admin_wrap admin_category_wrap">
+        <div class="admin_category_gnb">
+          <a href="#" id="back-button">
+            <img src="../../../images/left_gnb_arrow.png" alt="뒤로가기" />
+          </a>
+          <p>충전</p>
+        </div>
+
+        <!-- 카테고리 박스 -->
+        <div class="admin_category_box">
+          <!-- 검색 필드 -->
+          <div class="search-container">
+            <label for="search-id">아이디검색</label>
+            <div>
+              <input type="text" id="search-id" placeholder="아이디를 입력하세요" />
+              <button type="button" class="search-btn">검색</button>
+            </div>
+          </div>
+
+          <!-- 기간 선택 필드 -->
+          <div class="date-container">
+            <label for="start-date">기간선택</label>
+            <div>
+              <input type="text" id="start-date" placeholder="시작 날짜를 선택하세요" />
+              ~
+              <input type="text" id="end-date" placeholder="종료 날짜를 선택하세요" />
+            </div>
+          </div>
+
+          <!-- 테이블 -->
+          <div class="admin_table_box">
+            <table>
+              <thead>
+                <tr>
+                  <th>no</th>
+                  <th>소속</th>
+                  <th>아이디</th>
+                  <th>이름</th>
+                  <th>요청일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- tr 2개 1세트 -->
+                <tr>
+                  <td>4</td>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>24/05/30 17:45</td>
+                </tr>
+                <tr class="details-row">
+                  <td colspan="5">
+                    <div class="details-content">
+                      <div>
+                        <div class="amount">2,000,000원</div>
+                        <div class="balance">잔액 : 1,000,000원</div>
+                      </div>
+                      <div>
+                        <button class="approve-btn">승인</button>
+                        <button class="cancel-btn">취소</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- tr 2개 1세트 -->
+                <tr>
+                  <td>3</td>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>24/05/30 17:45</td>
+                </tr>
+                <tr class="details-row">
+                  <td colspan="5">
+                    <div class="details-content">
+                      <div>
+                        <div class="amount">2,000,000원</div>
+                        <div class="balance">잔액 : 1,000,000원</div>
+                      </div>
+                      <div>
+                        <button class="approve-btn">승인</button>
+                        <button class="cancel-btn">취소</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>24/05/30 17:45</td>
+                </tr>
+                <tr class="details-row">
+                  <td colspan="5">
+                    <div class="details-content">
+                      <div>
+                        <div class="amount">2,000,000원</div>
+                        <div class="balance">잔액 : 1,000,000원</div>
+                      </div>
+                      <div>
+                        <button class="approve-btn">승인</button>
+                        <button class="cancel-btn">취소</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>24/05/30 17:45</td>
+                </tr>
+                <tr class="details-row">
+                  <td colspan="5">
+                    <div class="details-content">
+                      <div>
+                        <div class="amount">2,000,000원</div>
+                        <div class="balance">잔액 : 1,000,000원</div>
+                      </div>
+                      <div>
+                        <button class="approve-btn">승인</button>
+                        <button class="cancel-btn">취소</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4123</td>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>24/05/30 17:45</td>
+                </tr>
+                <tr class="details-row">
+                  <td colspan="5">
+                    <div class="details-content">
+                      <div>
+                        <div class="amount">2,000,000원</div>
+                        <div class="balance">잔액 : 1,000,000원</div>
+                      </div>
+                      <div>
+                        <button class="approve-btn">승인</button>
+                        <button class="cancel-btn">취소</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4123</td>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>24/05/30 17:45</td>
+                </tr>
+                <tr class="details-row">
+                  <td colspan="5">
+                    <div class="details-content">
+                      <div>
+                        <div class="amount">2,000,000원</div>
+                        <div class="balance">잔액 : 1,000,000원</div>
+                      </div>
+                      <div>
+                        <button class="approve-btn">승인</button>
+                        <button class="cancel-btn">취소</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 페이지네이션 -->
+            <div class="admin_pagination_wrap">
+              <div class="pagination" id="pagination">
+                <ul>
+                  <li class="prev disabled">
+                    <img src="../../images/left_arrow.png" alt="Previous" />
+                  </li>
+                  <li class="active">1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li class="next"><img src="../../images/right_arrow.png" alt="Next" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 네비게이션 바 -->
+    <div class="bottom-nav">
+      <div class="nav-item">
+        <a href="/admin">
+          <img src="../../../images/home.png" alt="Main" />
+          <p>메인화면</p>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#">
+          <img src="../../../images/crypto.png" alt="Charge" />
+          <p>충전</p>
+          <span class="badge red">3</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#">
+          <img src="../../../images/exchange.png" alt="Exchange" />
+          <p>환전</p>
+          <span class="badge blue">3</span>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        // jQuery UI Datepicker 한국어 설정
+        $(document).ready(function () {
+          $.datepicker.setDefaults({
+            closeText: '닫기',
+            currentText: '오늘',
+            prevText: '이전 달',
+            nextText: '다음 달',
+            monthNames: [
+              '1월',
+              '2월',
+              '3월',
+              '4월',
+              '5월',
+              '6월',
+              '7월',
+              '8월',
+              '9월',
+              '10월',
+              '11월',
+              '12월',
+            ],
+            monthNamesShort: [
+              '1월',
+              '2월',
+              '3월',
+              '4월',
+              '5월',
+              '6월',
+              '7월',
+              '8월',
+              '9월',
+              '10월',
+              '11월',
+              '12월',
+            ],
+            dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            weekHeader: '주',
+            yearSuffix: '년',
+          });
+        });
+
+        var today = new Date();
+        var oneMonthAgo = new Date();
+        oneMonthAgo.setMonth(today.getMonth() - 1);
+
+        $('#start-date')
+          .datepicker({
+            dateFormat: 'yy/mm/dd',
+            defaultDate: oneMonthAgo,
+          })
+          .datepicker('setDate', oneMonthAgo);
+
+        $('#end-date')
+          .datepicker({
+            dateFormat: 'yy/mm/dd',
+            defaultDate: today,
+          })
+          .datepicker('setDate', today);
+      });
+    </script>
+  </body>
+</html>
