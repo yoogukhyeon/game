@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관리자등록</title>
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="../../css/common/reset.css" />
+
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="../../css/common/common.css" />
+
+    <!-- 관리자용 CSS -->
+    <link rel="stylesheet" href="../../css/admin/admin.css" />
+
+    <!-- admin 네비게이션 CSS -->
+    <link rel="stylesheet" href="../../css/admin/nav_bar.css" />
+
+    <!-- admin create css -->
+    <link rel="stylesheet" href="../../css/admin/create.css" />
+
+    <!-- 관리자용 JS (비동기 로드) -->
+    <script src="../../script/admin.js" type="module" async></script>
+
+    <style></style>
+  </head>
+
+  <body>
+    <div id="admin_container">
+      <div class="admin_wrap admin_category_wrap">
+        <div class="admin_category_gnb">
+          <a href="#" id="back-button">
+            <img src="../../images/left_gnb_arrow.png" alt="뒤로가기" />
+          </a>
+          <p>관리자등록</p>
+        </div>
+
+        <!-- 카테고리 박스 -->
+        <div class="admin_category_box">
+          <div class="admin_category_txt">
+            <p>상위관리자</p>
+            <img src="../../images/triangle.png" alt="화살표" />
+          </div>
+          <form>
+            <ul class="admin_form_list">
+              <!-- 아이디 -->
+              <li>
+                <label for="id">
+                  아이디<span class="label_icon"></span>
+                  <span class="label_status">사용 가능한 아이디입니다.</span>
+                </label>
+                <div class="input_container">
+                  <input type="text" id="id" placeholder="아이디" />
+                  <button type="button" class="check_button">중복확인</button>
+                </div>
+              </li>
+
+              <!-- 닉네임 -->
+              <li>
+                <label for="nickname">
+                  닉네임<span class="label_icon"></span>
+                  <span class="label_status">사용 가능한 닉네임입니다.</span>
+                </label>
+                <div class="input_container">
+                  <input type="text" id="nickname" placeholder="닉네임" />
+                  <button type="button" class="check_button">중복확인</button>
+                </div>
+              </li>
+
+              <!-- 비밀번호 -->
+              <li>
+                <label for="password">
+                  비밀번호<span class="label_icon"></span>
+                  <span class="label_status">안전한 비밀번호입니다.</span>
+                </label>
+                <div class="input_container">
+                  <input type="password" id="password" placeholder="비밀번호" autocomplete="off" />
+                </div>
+              </li>
+
+              <!-- 포인트적립 -->
+              <li>
+                <label for="point_accumulation">포인트적립</label>
+                <div class="input_container">
+                  <input type="text" id="point_accumulation" placeholder="3.3" />
+                  <span class="input_txt">%</span>
+                </div>
+              </li>
+
+              <!-- 매장총배팅금 -->
+              <li>
+                <label for="total_betting">매장총배팅금(전체한도)</label>
+                <div class="input_container">
+                  <input type="text" id="total_betting" placeholder="0" />
+                  <span class="input_txt">원</span>
+                </div>
+              </li>
+
+              <!-- 단폴배팅금 -->
+              <li>
+                <label for="single_betting">단폴배팅금</label>
+                <div class="input_container">
+                  <input type="text" id="single_betting" placeholder="0" />
+                  <span class="input_txt">원</span>
+                </div>
+              </li>
+
+              <!-- 2조합배팅금 -->
+              <li>
+                <label for="two_combo_betting">2조합배팅금</label>
+                <div class="input_container">
+                  <input type="text" id="two_combo_betting" placeholder="0" />
+                  <span class="input_txt">원</span>
+                </div>
+              </li>
+
+              <!-- 3조합배팅금 -->
+              <li>
+                <label for="three_combo_betting">3조합배팅금</label>
+                <div class="input_container">
+                  <input type="text" id="three_combo_betting" placeholder="0" />
+                  <span class="input_txt">원</span>
+                </div>
+              </li>
+
+              <!-- 숫자배팅금 -->
+              <li>
+                <label for="number_betting">숫자배팅금</label>
+                <div class="input_container">
+                  <input type="text" id="number_betting" placeholder="0" />
+                  <span class="input_txt">원</span>
+                </div>
+              </li>
+
+              <!-- 적용 버튼 -->
+              <li>
+                <button type="submit" id="apply_btn">적용</button>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 네비게이션 바 -->
+    <div class="bottom-nav">
+      <div class="nav-item">
+        <a href="/admin">
+          <img src="../../images/home.png" alt="Main" />
+          <p>메인화면</p>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#">
+          <img src="../../images/crypto.png" alt="Charge" />
+          <p>충전</p>
+          <span class="badge red">3</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="#">
+          <img src="../../images/exchange.png" alt="Exchange" />
+          <p>환전</p>
+          <span class="badge blue">3</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
