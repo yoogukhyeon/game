@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게임관리</title>
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="../../css/common/reset.css" />
+
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="../../css/common/common.css" />
+
+    <!-- 관리자용 CSS -->
+    <link rel="stylesheet" href="../../css/admin/admin.css" />
+
+    <!-- 관리자용 네비게이션 CSS -->
+    <link rel="stylesheet" href="../../css/admin/nav_bar.css" />
+
+    <!-- 베팅내역 -->
+    <link rel="stylesheet" href="../../css/admin/betting.css" />
+
+    <!-- 관리자용 충전 & 교환 공통 -->
+    <link rel="stylesheet" href="../../css/admin/charge_exchange.css" />
+
+    <!-- overflow auto table -->
+    <link rel="stylesheet" href="../../css/admin/overflow_auto_table.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+    <div id="admin_container">
+      <div class="admin_wrap admin_category_wrap">
+        <div class="admin_category_gnb">
+          <a href="#" id="back-button">
+            <img src="../../../images/left_gnb_arrow.png" alt="뒤로가기" />
+          </a>
+          <p>게임관리</p>
+        </div>
+
+        <div class="admin_category_box">
+          <ul class="admin_category">
+            <li><a href="/admin/game/betting">배팅금 설정</a></li>
+            <li><a href="/admin/game/dividend">배당금 설정</a></li>
+            <li><a href="/admin/game/result">결과값 강제 입력</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 네비게이션 바 -->
+    <div class="bottom-nav">
+      <div class="nav-item">
+        <a href="/admin">
+          <img src="../../images/home.png" alt="Main" />
+          <p>메인화면</p>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="/admin/charge">
+          <img src="../../images/crypto.png" alt="Charge" />
+          <p>충전</p>
+          <span class="badge red">3</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="/admin/exchange">
+          <img src="../../images/exchange.png" alt="Exchange" />
+          <p>환전</p>
+          <span class="badge blue">3</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 관리자용 JS (비동기 로드) -->
+    <script src="../../script/admin.js" type="module" async></script>
+  </body>
+</html>

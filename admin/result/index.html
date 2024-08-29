@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>배팅내역</title>
+    <title>정산</title>
 
     <!-- CSS 초기화 -->
     <link rel="stylesheet" href="../../css/common/reset.css" />
@@ -25,6 +25,13 @@
 
     <!-- overflow auto table -->
     <link rel="stylesheet" href="../../css/admin/overflow_auto_table.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
   </head>
 
   <body>
@@ -34,7 +41,7 @@
           <a href="#" id="back-button">
             <img src="../../../images/left_gnb_arrow.png" alt="뒤로가기" />
           </a>
-          <p>배팅내역</p>
+          <p>정산</p>
         </div>
 
         <!-- 카테고리 박스 -->
@@ -49,19 +56,26 @@
           </div>
 
           <!-- 기간 선택 필드 -->
+          <div class="date-container">
+            <label for="start-date">기간선택</label>
+            <div>
+              <input type="text" id="start-date" placeholder="시작 날짜를 선택하세요" />
+              ~
+              <input type="text" id="end-date" placeholder="종료 날짜를 선택하세요" />
+            </div>
+          </div>
 
           <!-- 테이블 -->
           <div class="admin_table_box">
-            <table class="custom_table overflow_auto_custom_table">
+            <table class="custom_table">
               <thead>
                 <tr>
                   <th>소속</th>
                   <th>아이디</th>
                   <th>이름</th>
                   <th>내역</th>
-                  <th>이전보육ㅁ</th>
+                  <th>이전보유금</th>
                   <th>변동금액</th>
-                  <th>이후보유금액</th>
                 </tr>
               </thead>
               <tbody>
@@ -69,41 +83,40 @@
                   <td>김총판</td>
                   <td>nangok</td>
                   <td>난곡너구리</td>
-                  <td>게임구매</td>
-                  <td>5,815,910</td>
-                  <td>-10.000</td>
-                  <td>-10.00022</td>
+                  <td>충전</td>
+                  <td>0</td>
+                  <td>+2,000,000</td>
                 </tr>
                 <tr>
                   <td>김총판</td>
                   <td>nangok</td>
                   <td>난곡너구리</td>
-                  <td>게임구매</td>
-                  <td>5,815,910</td>
-                  <td>-10.000</td>
-                  <td>-10.00022</td>
+                  <td>충전</td>
+                  <td>0</td>
+                  <td>+2,000,000</td>
                 </tr>
                 <tr>
                   <td>김총판</td>
                   <td>nangok</td>
                   <td>난곡너구리</td>
-                  <td>게임구매</td>
-                  <td>5,815,910</td>
-                  <td>-10.000</td>
-                  <td>-10.00022</td>
+                  <td>충전</td>
+                  <td>0</td>
+                  <td>+2,000,000</td>
                 </tr>
                 <tr>
                   <td>김총판</td>
                   <td>nangok</td>
                   <td>난곡너구리</td>
-                  <td>게임구매</td>
-                  <td>5,815,910</td>
-                  <td>-10.000</td>
-                  <td>-10.00022</td>
+                  <td>충전</td>
+                  <td>0</td>
+                  <td>+2,000,000</td>
                 </tr>
               </tbody>
             </table>
             <!-- 페이지네이션 -->
+            <div class="result_money">
+              <p>충전금액: 10,000,000원</p>
+            </div>
             <div class="admin_pagination_wrap">
               <div class="pagination" id="pagination">
                 <ul>
@@ -149,5 +162,69 @@
 
     <!-- 관리자용 JS (비동기 로드) -->
     <script src="../../script/admin.js" type="module" async></script>
+    <script>
+      $(function () {
+        // jQuery UI Datepicker 한국어 설정
+        $(document).ready(function () {
+          $.datepicker.setDefaults({
+            closeText: '닫기',
+            currentText: '오늘',
+            prevText: '이전 달',
+            nextText: '다음 달',
+            monthNames: [
+              '1월',
+              '2월',
+              '3월',
+              '4월',
+              '5월',
+              '6월',
+              '7월',
+              '8월',
+              '9월',
+              '10월',
+              '11월',
+              '12월',
+            ],
+            monthNamesShort: [
+              '1월',
+              '2월',
+              '3월',
+              '4월',
+              '5월',
+              '6월',
+              '7월',
+              '8월',
+              '9월',
+              '10월',
+              '11월',
+              '12월',
+            ],
+            dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            weekHeader: '주',
+            yearSuffix: '년',
+          });
+        });
+
+        var today = new Date();
+        var oneMonthAgo = new Date();
+        oneMonthAgo.setMonth(today.getMonth() - 1);
+
+        $('#start-date')
+          .datepicker({
+            dateFormat: 'yy/mm/dd',
+            defaultDate: oneMonthAgo,
+          })
+          .datepicker('setDate', oneMonthAgo);
+
+        $('#end-date')
+          .datepicker({
+            dateFormat: 'yy/mm/dd',
+            defaultDate: today,
+          })
+          .datepicker('setDate', today);
+      });
+    </script>
   </body>
 </html>
