@@ -34,7 +34,7 @@
         <!-- 카테고리 박스 -->
         <div class="admin_category_box">
           <div class="admin_category_txt">
-            <p>상위관리자</p>
+            <p>관리자등급</p>
             <img src="../../images/triangle.png" alt="화살표" />
           </div>
           <form>
@@ -76,55 +76,18 @@
 
               <!-- 포인트적립 -->
               <li>
+                <label for="color">컬러색상</label>
+                <div class="input_container">
+                  <input type="text" id="color" placeholder="컬러색상" />
+                </div>
+              </li>
+
+              <!-- 포인트적립 -->
+              <li>
                 <label for="point_accumulation">포인트적립</label>
                 <div class="input_container">
                   <input type="text" id="point_accumulation" placeholder="3.3" />
                   <span class="input_txt">%</span>
-                </div>
-              </li>
-
-              <!-- 매장총배팅금 -->
-              <li>
-                <label for="total_betting">매장총배팅금(전체한도)</label>
-                <div class="input_container">
-                  <input type="text" id="total_betting" placeholder="0" />
-                  <span class="input_txt">원</span>
-                </div>
-              </li>
-
-              <!-- 단폴배팅금 -->
-              <li>
-                <label for="single_betting">단폴배팅금</label>
-                <div class="input_container">
-                  <input type="text" id="single_betting" placeholder="0" />
-                  <span class="input_txt">원</span>
-                </div>
-              </li>
-
-              <!-- 2조합배팅금 -->
-              <li>
-                <label for="two_combo_betting">2조합배팅금</label>
-                <div class="input_container">
-                  <input type="text" id="two_combo_betting" placeholder="0" />
-                  <span class="input_txt">원</span>
-                </div>
-              </li>
-
-              <!-- 3조합배팅금 -->
-              <li>
-                <label for="three_combo_betting">3조합배팅금</label>
-                <div class="input_container">
-                  <input type="text" id="three_combo_betting" placeholder="0" />
-                  <span class="input_txt">원</span>
-                </div>
-              </li>
-
-              <!-- 숫자배팅금 -->
-              <li>
-                <label for="number_betting">숫자배팅금</label>
-                <div class="input_container">
-                  <input type="text" id="number_betting" placeholder="0" />
-                  <span class="input_txt">원</span>
                 </div>
               </li>
 
@@ -142,20 +105,20 @@
     <div class="bottom-nav">
       <div class="nav-item">
         <a href="/admin">
-          <img src="../images/home.png" alt="Main" />
+          <img src="../../images/home.png" alt="Main" />
           <p>메인화면</p>
         </a>
       </div>
       <div class="nav-item">
         <a href="/admin/charge">
-          <img src="../images/crypto.png" alt="Charge" />
+          <img src="../../images/crypto.png" alt="Charge" />
           <p>충전</p>
           <span class="badge red">3</span>
         </a>
       </div>
       <div class="nav-item">
         <a href="/admin/exchange">
-          <img src="../images/exchange.png" alt="Exchange" />
+          <img src="../../images/exchange.png" alt="Exchange" />
           <p>환전</p>
           <span class="badge blue">3</span>
         </a>

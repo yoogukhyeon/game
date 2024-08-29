@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배팅내역</title>
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="../../css/common/reset.css" />
+
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="../../css/common/common.css" />
+
+    <!-- 관리자용 CSS -->
+    <link rel="stylesheet" href="../../css/admin/admin.css" />
+
+    <!-- 관리자용 네비게이션 CSS -->
+    <link rel="stylesheet" href="../../css/admin/nav_bar.css" />
+
+    <!-- 베팅내역 -->
+    <link rel="stylesheet" href="../../css/admin/betting.css" />
+
+    <!-- 관리자용 충전 & 교환 공통 -->
+    <link rel="stylesheet" href="../../css/admin/charge_exchange.css" />
+
+    <!-- overflow auto table -->
+    <link rel="stylesheet" href="../../css/admin/overflow_auto_table.css" />
+  </head>
+
+  <body>
+    <div id="admin_container">
+      <div class="admin_wrap admin_category_wrap">
+        <div class="admin_category_gnb">
+          <a href="#" id="back-button">
+            <img src="../../../images/left_gnb_arrow.png" alt="뒤로가기" />
+          </a>
+          <p>배팅내역</p>
+        </div>
+
+        <!-- 카테고리 박스 -->
+        <div class="admin_category_box">
+          <!-- 검색 필드 -->
+          <div class="search-container">
+            <label for="search-id">아이디검색</label>
+            <div>
+              <input type="text" id="search-id" placeholder="아이디를 입력하세요" />
+              <button type="button" class="search-btn">검색</button>
+            </div>
+          </div>
+
+          <!-- 기간 선택 필드 -->
+
+          <!-- 테이블 -->
+          <div class="admin_table_box">
+            <table class="custom_table">
+              <thead>
+                <tr>
+                  <th>소속</th>
+                  <th>아이디</th>
+                  <th>이름</th>
+                  <th>내역</th>
+                  <th>이전보육ㅁ</th>
+                  <th>변동금액</th>
+                  <th>이후보유금액</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>게임구매</td>
+                  <td>5,815,910</td>
+                  <td>-10.000</td>
+                  <td>-10.00022</td>
+                </tr>
+                <tr>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>게임구매</td>
+                  <td>5,815,910</td>
+                  <td>-10.000</td>
+                  <td>-10.00022</td>
+                </tr>
+                <tr>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>게임구매</td>
+                  <td>5,815,910</td>
+                  <td>-10.000</td>
+                  <td>-10.00022</td>
+                </tr>
+                <tr>
+                  <td>김총판</td>
+                  <td>nangok</td>
+                  <td>난곡너구리</td>
+                  <td>게임구매</td>
+                  <td>5,815,910</td>
+                  <td>-10.000</td>
+                  <td>-10.00022</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 페이지네이션 -->
+            <div class="admin_pagination_wrap">
+              <div class="pagination" id="pagination">
+                <ul>
+                  <li class="prev disabled">
+                    <img src="../../images/left_arrow.png" alt="Previous" />
+                  </li>
+                  <li class="active">1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li class="next"><img src="../../images/right_arrow.png" alt="Next" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 네비게이션 바 -->
+    <div class="bottom-nav">
+      <div class="nav-item">
+        <a href="/admin">
+          <img src="../../images/home.png" alt="Main" />
+          <p>메인화면</p>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="/admin/charge">
+          <img src="../../images/crypto.png" alt="Charge" />
+          <p>충전</p>
+          <span class="badge red">3</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a href="/admin/exchange">
+          <img src="../../images/exchange.png" alt="Exchange" />
+          <p>환전</p>
+          <span class="badge blue">3</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 관리자용 JS (비동기 로드) -->
+    <script src="../../script/admin.js" type="module" async></script>
+  </body>
+</html>

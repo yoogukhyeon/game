@@ -1,0 +1,29 @@
+.admin_table_box {
+  max-width: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.custom_table {
+  border-collapse: separate;
+  border-spacing: 0 2px;
+}
+.custom_table td:first-child {
+  border-left: 2px solid yellow; /* Add yellow border on the left side */
+}
+
+@media (max-width: 450px) {
+  .custom_table th,
+  .custom_table td {
+    font-size: 12px;
+    padding: 8px 6px !important;
+  }
+
+  .admin_table_box {
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+
+  .custom_table {
+    min-width: 600px;
+  }
+}
