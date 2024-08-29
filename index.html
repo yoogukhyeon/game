@@ -16,6 +16,9 @@
 
     <!-- css 모달 사용 -->
     <link rel="stylesheet" href="./css/modal.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <div id="container">
@@ -45,7 +48,7 @@
       <!-- ******************** -->
       <div class="content1">
         <!-- 배팅내역 블라인드 -->
-        <div class="content1_bg"></div>
+        <!-- <div class="content1_bg"></div> -->
 
         <!-- 로고 이미지 -->
         <div class="content1_first">
@@ -485,6 +488,7 @@
         <div id="modal_info">
           <!-- 모달 정보는 동적으로 추가됨 -->
         </div>
+
         <div class="modal_body" id="modal_body">
           <!-- 모달 내용이 여기에 동적으로 추가됨 -->
         </div>
@@ -502,6 +506,24 @@
         </div>
       </div>
     </div>
+
+    <!-- 탭메뉴추가! -->
+    <script>
+      $(document).on('click', '.modal_tab ul li', function () {
+        // 모든 탭에서 active 클래스 제거
+        $('.modal_tab ul li').removeClass('active');
+
+        // 클릭한 탭에 active 클래스 추가
+        $(this).addClass('active');
+
+        // 모든 탭 내용 숨기기
+        $('.tab-content').hide();
+
+        // 클릭한 탭에 해당하는 내용 보여주기
+        var tabId = $(this).data('tab');
+        $('#' + tabId).show();
+      });
+    </script>
     <script>
       // 모달 데이터 정의
       const modalData = {
@@ -537,61 +559,143 @@
                                         </tbody>
                                     </table>
                                 `,
-        추첨결과: `
-                                  <table>
-                                        <thead>
-                                            <tr>
-                                                <th>회차</th>
-                                                <th>추첨번호</th>
-                                                <th>결과</th>
-                                                <th>날짜</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>123122543534회(161회)</td>
-                                                <td>07, 27, 20, 18, 25 1</td>
-                                                <td>
-                                  <ul class="modal_result_list">
-                                    <li class="modal_result_odd">파워볼 홈</li>
-                                    <li  class="modal_result_odd">파워볼 언더</li>
-                                    <li class="modal_result_odd">파워볼 홀</li>
-                                    <li class="modal_result_even"i>파워볼 오버</li>
-                                    <li class="modal_result_big">파워볼 대</li>
-                                  </ul>
-                                </td>
-                                <td>24/05/29 17:05</td>
-                                            </tr>
-                                            <tr>
-                                                <td>123122543534회(161회)</td>
-                                                <td>07, 27, 20, 18, 25 1</td>
-                                                <td>
-                                  <ul class="modal_result_list">
-                                    <li class="modal_result_odd">파워볼 홈</li>
-                                    <li  class="modal_result_odd">파워볼 언더</li>
-                                    <li class="modal_result_odd">파워볼 홀</li>
-                                    <li class="modal_result_even"i>파워볼 오버</li>
-                                    <li class="modal_result_big">파워볼 대</li>
-                                  </ul>
-                                </td>
-                                <td>24/05/29 17:05</td>
-                                            </tr>
-                                  <tr>
-                                                <td>123122543534회(161회)</td>
-                                                <td>07, 27, 20, 18, 25 1</td>
-                                                <td>
-                                  <ul class="modal_result_list">
-                                    <li class="modal_result_odd">파워볼 홈</li>
-                                    <li  class="modal_result_odd">파워볼 언더</li>
-                                    <li class="modal_result_odd">파워볼 홀</li>
-                                    <li class="modal_result_even"i>파워볼 오버</li>
-                                    <li class="modal_result_big">파워볼 대</li>
-                                  </ul>
-                                </td>
-                                <td>24/05/29 17:05</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+        추첨결과: `                 
+                              <div class="modal_tab">
+                                <ul>
+                                  <li class="active" data-tab="tab-dhb">DHB</li>
+                                  <li data-tab="tab-pbg">PBG</li>
+                                  <li data-tab="tab-eos">EOS</li>
+                                </ul>
+                              </div>
+
+                              <div id="tab-dhb" class="tab-content">
+                                <table>
+                                  <thead>
+                                    <tr>
+                                      <th>회차</th>
+                                      <th>추첨번호</th>
+                                      <th>결과</th>
+                                      <th>날짜</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>123122543534회(161회)</td>
+                                      <td>07, 27, 20, 18, 25 1</td>
+                                      <td>
+                                        <ul class="modal_result_list">
+                                          <li class="modal_result_odd">파워볼 홈</li>
+                                          <li class="modal_result_odd">파워볼 언더</li>
+                                          <li class="modal_result_odd">파워볼 홀</li>
+                                          <li class="modal_result_even">파워볼 오버</li>
+                                          <li class="modal_result_big">파워볼 대</li>
+                                        </ul>
+                                      </td>
+                                      <td>24/05/29 17:05</td>
+                                    </tr>
+                                    <tr>
+                                      <td>123122543534회(161회)</td>
+                                      <td>07, 27, 20, 18, 25 1</td>
+                                      <td>
+                                        <ul class="modal_result_list">
+                                          <li class="modal_result_odd">파워볼 홈</li>
+                                          <li class="modal_result_odd">파워볼 언더</li>
+                                          <li class="modal_result_odd">파워볼 홀</li>
+                                          <li class="modal_result_even">파워볼 오버</li>
+                                          <li class="modal_result_big">파워볼 대</li>
+                                        </ul>
+                                      </td>
+                                      <td>24/05/29 17:05</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+
+                              <div id="tab-pbg" class="tab-content" style="display:none;">
+                                <table>
+                                  <thead>
+                                    <tr>
+                                      <th>회차</th>
+                                      <th>추첨번호</th>
+                                      <th>결과</th>
+                                      <th>날짜</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>123122543534회(162회)</td>
+                                      <td>09, 23, 34, 10, 07 4</td>
+                                      <td>
+                                        <ul class="modal_result_list">
+                                          <li class="modal_result_odd">파워볼 홈</li>
+                                          <li class="modal_result_odd">파워볼 언더</li>
+                                          <li class="modal_result_odd">파워볼 홀</li>
+                                          <li class="modal_result_even">파워볼 오버</li>
+                                          <li class="modal_result_big">파워볼 소</li>
+                                        </ul>
+                                      </td>
+                                      <td>24/06/01 18:00</td>
+                                    </tr>
+                                    <tr>
+                                      <td>123122543534회(162회)</td>
+                                      <td>09, 23, 34, 10, 07 4</td>
+                                      <td>
+                                        <ul class="modal_result_list">
+                                          <li class="modal_result_odd">파워볼 홈</li>
+                                          <li class="modal_result_odd">파워볼 언더</li>
+                                          <li class="modal_result_odd">파워볼 홀</li>
+                                          <li class="modal_result_even">파워볼 오버</li>
+                                          <li class="modal_result_big">파워볼 소</li>
+                                        </ul>
+                                      </td>
+                                      <td>24/06/01 18:00</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+
+                              <div id="tab-eos" class="tab-content" style="display:none;">
+                                <table>
+                                  <thead>
+                                    <tr>
+                                      <th>회차</th>
+                                      <th>추첨번호</th>
+                                      <th>결과</th>
+                                      <th>날짜</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>123122543534회(163회)</td>
+                                      <td>12, 30, 08, 14, 22 2</td>
+                                      <td>
+                                        <ul class="modal_result_list">
+                                          <li class="modal_result_odd">파워볼 원정</li>
+                                          <li class="modal_result_odd">파워볼 오버</li>
+                                          <li class="modal_result_odd">파워볼 홀</li>
+                                          <li class="modal_result_even">파워볼 언더</li>
+                                          <li class="modal_result_big">파워볼 대</li>
+                                        </ul>
+                                      </td>
+                                      <td>24/06/02 19:30</td>
+                                    </tr>
+                                    <tr>
+                                      <td>123122543534회(163회)</td>
+                                      <td>12, 30, 08, 14, 22 2</td>
+                                      <td>
+                                        <ul class="modal_result_list">
+                                          <li class="modal_result_odd">파워볼 원정</li>
+                                          <li class="modal_result_odd">파워볼 오버</li>
+                                          <li class="modal_result_odd">파워볼 홀</li>
+                                          <li class="modal_result_even">파워볼 언더</li>
+                                          <li class="modal_result_big">파워볼 대</li>
+                                        </ul>
+                                      </td>
+                                      <td>24/06/02 19:30</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
                                 `,
         충전: `
                                     <table>

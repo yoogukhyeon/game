@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>탭 메뉴</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <style>
+      /* 기본 스타일 */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+      }
+
+      .modal_tab {
+        margin-bottom: 20px;
+      }
+
+      .modal_tab ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+      }
+
+      .modal_tab ul li {
+        padding: 10px 20px;
+        background-color: #555;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+
+      .modal_tab ul li.active {
+        background-color: #ffd700;
+        color: black;
+        font-weight: bold;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        color: white;
+      }
+
+      th {
+        background-color: #444;
+      }
+
+      tr:nth-child(even) {
+        background-color: #555;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #666;
+      }
+
+      .modal_result_list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .modal_result_list li {
+        margin: 2px 0;
+      }
+
+      .modal_result_odd {
+        color: #ffd700;
+      }
+
+      .modal_result_even {
+        color: #007bff;
+      }
+
+      .modal_result_big {
+        color: #ff0000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="modal_tab">
+      <ul>
+        <li class="active" data-tab="tab-dhb">DHB</li>
+        <li data-tab="tab-pbg">PBG</li>
+        <li data-tab="tab-eos">EOS</li>
+      </ul>
+    </div>
+
+    <div id="tab-dhb" class="tab-content">
+      <table>
+        <thead>
+          <tr>
+            <th>회차</th>
+            <th>추첨번호</th>
+            <th>결과</th>
+            <th>날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>123122543534회(161회)</td>
+            <td>07, 27, 20, 18, 25 1</td>
+            <td>
+              <ul class="modal_result_list">
+                <li class="modal_result_odd">파워볼 홈</li>
+                <li class="modal_result_odd">파워볼 언더</li>
+                <li class="modal_result_odd">파워볼 홀</li>
+                <li class="modal_result_even">파워볼 오버</li>
+                <li class="modal_result_big">파워볼 대</li>
+              </ul>
+            </td>
+            <td>24/05/29 17:05</td>
+          </tr>
+          <tr>
+            <td>123122543534회(161회)</td>
+            <td>07, 27, 20, 18, 25 1</td>
+            <td>
+              <ul class="modal_result_list">
+                <li class="modal_result_odd">파워볼 홈</li>
+                <li class="modal_result_odd">파워볼 언더</li>
+                <li class="modal_result_odd">파워볼 홀</li>
+                <li class="modal_result_even">파워볼 오버</li>
+                <li class="modal_result_big">파워볼 대</li>
+              </ul>
+            </td>
+            <td>24/05/29 17:05</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-pbg" class="tab-content" style="display: none">
+      <table>
+        <thead>
+          <tr>
+            <th>회차</th>
+            <th>추첨번호</th>
+            <th>결과</th>
+            <th>날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>123122543534회(162회)</td>
+            <td>09, 23, 34, 10, 07 4</td>
+            <td>
+              <ul class="modal_result_list">
+                <li class="modal_result_odd">파워볼 홈</li>
+                <li class="modal_result_odd">파워볼 언더</li>
+                <li class="modal_result_odd">파워볼 홀</li>
+                <li class="modal_result_even">파워볼 오버</li>
+                <li class="modal_result_big">파워볼 소</li>
+              </ul>
+            </td>
+            <td>24/06/01 18:00</td>
+          </tr>
+          <tr>
+            <td>123122543534회(162회)</td>
+            <td>09, 23, 34, 10, 07 4</td>
+            <td>
+              <ul class="modal_result_list">
+                <li class="modal_result_odd">파워볼 홈</li>
+                <li class="modal_result_odd">파워볼 언더</li>
+                <li class="modal_result_odd">파워볼 홀</li>
+                <li class="modal_result_even">파워볼 오버</li>
+                <li class="modal_result_big">파워볼 소</li>
+              </ul>
+            </td>
+            <td>24/06/01 18:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="tab-eos" class="tab-content" style="display: none">
+      <table>
+        <thead>
+          <tr>
+            <th>회차</th>
+            <th>추첨번호</th>
+            <th>결과</th>
+            <th>날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>123122543534회(163회)</td>
+            <td>12, 30, 08, 14, 22 2</td>
+            <td>
+              <ul class="modal_result_list">
+                <li class="modal_result_odd">파워볼 원정</li>
+                <li class="modal_result_odd">파워볼 오버</li>
+                <li class="modal_result_odd">파워볼 홀</li>
+                <li class="modal_result_even">파워볼 언더</li>
+                <li class="modal_result_big">파워볼 대</li>
+              </ul>
+            </td>
+            <td>24/06/02 19:30</td>
+          </tr>
+          <tr>
+            <td>123122543534회(163회)</td>
+            <td>12, 30, 08, 14, 22 2</td>
+            <td>
+              <ul class="modal_result_list">
+                <li class="modal_result_odd">파워볼 원정</li>
+                <li class="modal_result_odd">파워볼 오버</li>
+                <li class="modal_result_odd">파워볼 홀</li>
+                <li class="modal_result_even">파워볼 언더</li>
+                <li class="modal_result_big">파워볼 대</li>
+              </ul>
+            </td>
+            <td>24/06/02 19:30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      $(function () {
+        // 탭 클릭 이벤트 처리
+        $('.modal_tab ul li').click(function () {
+          // 모든 탭에서 active 클래스 제거
+          $('.modal_tab ul li').removeClass('active');
+
+          // 클릭한 탭에 active 클래스 추가
+          $(this).addClass('active');
+
+          // 모든 탭 내용 숨기기
+          $('.tab-content').hide();
+
+          // 클릭한 탭에 해당하는 내용 보여주기
+          var tabId = $(this).data('tab');
+          $('#' + tabId).show();
+        });
+      });
+    </script>
+  </body>
+</html>
