@@ -19,9 +19,6 @@
 
     <!-- admin create css -->
     <link rel="stylesheet" href="../../../css/admin/create.css" />
-
-    <!-- 관리자용 JS (비동기 로드) -->
-    <script src="../../../script/admin.js" type="module" async></script>
   </head>
 
   <body>
@@ -150,19 +147,22 @@
         </a>
       </div>
       <div class="nav-item">
-        <a href="#">
+        <a href="/admin/charge">
           <img src="../../../images/crypto.png" alt="Charge" />
           <p>충전</p>
           <span class="badge red">3</span>
         </a>
       </div>
       <div class="nav-item">
-        <a href="#">
+        <a href="/admin/exchange">
           <img src="../../../images/exchange.png" alt="Exchange" />
           <p>환전</p>
           <span class="badge blue">3</span>
         </a>
       </div>
     </div>
+
+    <!-- 관리자용 JS (비동기 로드) -->
+    <script src="../../../script/admin.js" type="module" async></script>
   </body>
 </html>
