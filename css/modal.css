@@ -9,6 +9,7 @@
   height: 100%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4); /* 모달 바깥쪽 배경을 어둡게 처리 */
+  z-index: 9999;
 }
 
 .modal_content {
