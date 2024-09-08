@@ -315,7 +315,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  grid-auto-rows: minmax(200px, auto);
+  //grid-auto-rows: minmax(200px, auto);
+
+  flex-grow: 1;
 }
 
 .game_box > div {
@@ -364,6 +366,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3px;
+  height: 100%;
 }
 
 .number_list li,
@@ -377,6 +380,7 @@
   overflow: hidden;
   padding: 15px 0;
   cursor: pointer;
+  justify-content: center;
 }
 
 /* game 선택 */
